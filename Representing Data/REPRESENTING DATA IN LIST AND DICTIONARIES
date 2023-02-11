@@ -1,0 +1,44 @@
+An Example Problem Statement
+Compare these two sequences of DNA, which contain many pieces of DNA. They are similar, but not the same, based on the order and value of each piece. These two sequences are the same length.
+
+No.	Sequence
+1	  GAGCCTACTAACGGGAT
+2	  CATCGTAATGACGGCCT
+
+Create a function. In this function:
+Make a list that contains all the differences between the two sequences.
+Find the differences between the two sequences.
+Add each difference to the list of differences.
+
+# Pseudocode
+# Uses a loop to go through each of the elements in the sequence1
+# Uses an if statement to compare sequence2 to sequence1
+# Output the DNA strings that are differences in sequence1 from sequence2
+# Print the DNA string differences of sequence1
+
+# Uses a loop to go through each of the elements in the sequence1
+# Uses an if statement to compare sequence1 with sequence2
+# Output the DNA strings that are differences in sequence2 from sequence1
+# Print the DNA string differences of sequence2
+
+sequence1 = [
+  "G", "A", "G", "C", "C", "T", "A", "C", "T", "A", "A", "C", "G", "G", "G",
+  "A", "T"
+]
+sequence2 = [
+  "C", "A", "T", "C", "G", "T", "A", "A", "T", "G", "A", "C", "G", "G", "C",
+  "C", "T"
+]
+sequence1_difference = []
+sequence2_difference = []
+
+for DNA in range(len(sequence1)):
+  if sequence1[DNA] != sequence2[DNA]:
+    sequence1_difference.append(sequence1[DNA])
+print(f'sequence1_difference: {sequence1_difference}')
+
+for DNA in range(len(sequence1)):
+  if sequence2[DNA] != sequence1[DNA]:
+    sequence2_difference.append(sequence2[DNA])
+print(f'sequence2_difference: {sequence2_difference}')
+
