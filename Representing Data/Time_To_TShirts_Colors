@@ -1,0 +1,24 @@
+Time_To_TShirt_Color = {
+    800: ["red", "orange", "green"],
+    900: ["red", "orange"],
+    1000: ["blue"],
+    1100: ["blue", "green"],
+    1200: ["blue", "gray"],
+    1300: ["red", "blue"],
+    1400: ["white"],
+    1500: ["green", "white"],
+    1600: ["white", "black"],
+    1700: ["yellow", "black"],
+    1800: ["white", "green", "gray", "red", "blue"]
+}
+
+Tshirt_Color_Frequency = {
+    "red": 4,
+    "orange": 2,
+    "green": 4,
+    "blue": 5,
+    "gray": 2,
+    "white": 4,
+    "black": 2,
+    "yellow": 2
+}
