@@ -1,0 +1,27 @@
+Using the data above, create a list of contestants' names. The names should be in the order of descending age, where the oldest contestant's name is first, and the youngest contestant's name is last. Put that list in the function sort_contestants_age_desc() as a list literal and return it.
+
+# Hanh's Code
+
+name_to_age = {
+  "Mae":	31,
+  "Brandi":	22,
+  "Dane":	44,
+  "Neo":	39,
+  "Amara": 36,
+  "Jules": 28
+}
+
+# Manual way of adding in the dict keys and sorting it
+def sort_contestants_age_desc():
+  name = ["Dane", "Neo", "Amara", "Mae", "Jules", "Brandi"] # is there a way to code this using a built in function to desc the keys from the dict???
+  return name
+print(sort_contestants_age_desc())
+
+# Use an operator and built in function to sort the dict keys
+import operator
+
+def sort_contestants_age_desc():
+  name = dict(sorted(name_to_age.items(), key=operator.itemgetter(1),reverse=True))
+  name_list = list(name.keys()) # To show the dict keys only in a list
+  return name_list
+print(sort_contestants_age_desc())
