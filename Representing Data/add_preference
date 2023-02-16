@@ -1,0 +1,21 @@
+Implement the function add_preference(). This function takes in a preferences dictionary, a category, and a value. This function should add a new key-value pair to preferences, where category is the key and value is the value. Then, it should return preferences.
+
+#Preferences:	            Category:	          Value:
+#name	                    string	            "Hanh"
+#is_morning_person	      boolean	            False
+#is_night_owl	            boolean	            True
+#fav_song_title	          string or None	    None
+#num_of_household_members	integer	            3
+
+
+def add_preferences(preferences, category, value):
+  preferences = {
+  "string": "Hanh",
+  "boolean": False,
+  "boolean": True,
+  "string or None": None,
+  "integer": 3
+  }
+  preferences[category] = value # The next category and value pair will be inside the preferences dict
+  return preferences
+print(add_preferences({},"test cat", "test value")) # adding new key/value pairs to the current dict
