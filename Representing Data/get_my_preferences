@@ -1,0 +1,19 @@
+Fill out this table's data. Then, create a dictionary literal from the Field and Value columns in that table. Put that dictionary in the function get_my_preferences() as a dictionary literal and return 
+
+#Field:	                  Expected Data Type:	  Value:
+#name	                    string	              "Hanh"
+#is_morning_person	      boolean	              False
+#is_night_owl	            boolean	              True
+#fav_song_title	          string or None	      None
+#num_of_household_members	integer	              3
+
+def get_my_preferences():
+  field_to_value = {
+      "name": "Hanh",
+      "is_morning_person": False,
+      "is_night_person": True,
+      "fav_song_title": None,
+      "num_of_household_members": 3
+  }
+  return field_to_value
+print(get_my_preferences())
