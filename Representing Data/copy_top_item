@@ -1,0 +1,29 @@
+10. Implement the function `copy_top_item()`. This function takes in two grocery lists, `my_groceries` and `their_groceries`. This function should:
+    
+    Read the first element from the list `their_groceries`, and store it into a local variable.
+    
+    Replace (re-assign) the first element in `my_groceries` with the stored value (the local variable).
+    
+    Return this modified list.
+    
+    The test for this function is:
+    
+    def test_copy_top_item_reassigns_my_groceries():
+      kiris_groceries = ["Spinach", "Broccoli", "Eggplants", "Potatoes"]
+      tiegans_groceries = ["Avocados", "Oat Milk", "Mangoes"]
+
+      new_groceries = copy_top_item(kiris_groceries, tiegans_groceries)
+
+      assert new_groceries == ["Avocados", "Broccoli", "Eggplants", "Potatoes"]
+      # Check that their_groceries wasn't modified
+      assert tiegans_groceries == ["Avocados", "Oat Milk", "Mangoes"]`
+      
+      
+my_groceries = ["Spinach", "Broccoli", "Eggplants", "Potatoes"]
+their_groceries = ["Avocados", "Oat Milk", "Mangoes"]
+
+def copy_top_item(my_groceries, their_groceries):
+  new_groceries_list = their_groceries[0] # Output the first element in the their_grocery list
+  my_groceries[0] = new_groceries_list # Replace the first element of my_groceries with the new element from new_groceries_list
+  return my_groceries # Outputs the newly replaced my_groceries list
+print(copy_top_item(my_groceries, their_groceries))
