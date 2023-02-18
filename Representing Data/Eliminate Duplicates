@@ -1,0 +1,22 @@
+#Let's say we have a string of letters and we want to find all of the unique characters in the string. Here's a way to code it without using sets:
+
+phrase = "Fuzzy Wuzzy was a bear"
+result = []
+
+for char in phrase:  # loop over each character in the string
+    if char not in result: # if the character is not in the result set:
+        result.append(char) # add the character to the result set
+
+for char in result: # print out the results
+    print(char)
+    
+  
+  
+#Here’s another way to code it using sets and streamline the code:
+
+phrase = "Fuzzy Wuzzy was a bear"
+
+result_set = set(phrase)
+for char in result_set:
+  print(char) # Will print out the same as above but not in any specific order as it is a set
+
