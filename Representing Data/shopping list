@@ -1,0 +1,29 @@
+#Sandra is having a party and has three recipes she wants to make. She has created a list of ingredients for each recipe. Write a function shopping_list that Sandra can use to create a shopping list of all of the ingredients that she will need to purchase. She wants each item to show up only once in the list.
+
+bruschetta = ["bread", "olive oil", "garlic", "tomato", "basil", "balsamic vinegar", "salt"]
+pesto_pasta = ["pasta", "olive oil", "garlic", "basil", "parmesan", "pine nuts"]
+salsa = ["tomato", "onion", "garlic", "salt", "green onion", "cilantro", "jalapeno"]
+
+
+
+# Pseudocode:
+# Input is a list, Output is a list
+# Create a function with the 3 list as parameters
+# Create each new variable to change each of the 3 list into individual sets
+# Create a new variable to combine the 3 sets together (by using the | union operator) to shows only once each of the elements
+# Create a new variable to convert the set into 1 list
+# Return the list
+# Print to call the function with all the arguments
+
+bruschetta = ["bread", "olive oil", "garlic", "tomato", "basil", "balsamic vinegar", "salt"]
+pesto_pasta = ["pasta", "olive oil", "garlic", "basil", "parmesan", "pine nuts"]
+salsa = ["tomato", "onion", "garlic", "salt", "green onion", "cilantro", "jalapeno"]
+
+def shopping_list(bruschetta, pesto_pasta, salsa):
+  bruschetta_set = set(bruschetta)
+  pesto_pasta_set = set(pesto_pasta)
+  salsa_set = set(salsa)
+  individual_ingredient_set = bruschetta_set | pesto_pasta_set | salsa_set
+  individual_ingredient_list = list(individual_ingredient_set)
+  return individual_ingredient_list
+print(shopping_list(bruschetta, pesto_pasta, salsa))
