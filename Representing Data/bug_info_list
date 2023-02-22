@@ -1,0 +1,23 @@
+#Part 1:
+#Mady and Lesha track their bug information in lists. They would love to know which unique bugs each has caught. They'd like to get some sort of insect index, sort of an InsectDex containing that unique information. Write a function `make_insect_dex` that they can use to make an InsectDex for each of them. Remember that in the InsectDex, each insect should appear only once.
+    
+mady_bugs = ["lightning bug", "caterpillar", "ladybug", "lightning bug", "ladybug", "monarch butterfly", "june bug", "carpenter ant"]
+lesha_bugs = ["stag beetle", "earwig", "millipede", "pill bug", "june bug", "lightning bug", "dragonfly"]
+
+# Psuedocode: 
+# Input is a list that has multiple duplicates, Output is a set that does not contain duplicates within its own set
+# Create a function with two parameters
+# Create a variable to change each of the list to a set
+# Return each of the individual sets
+# Print to call each of the individuals set
+
+mady_bugs = ["lightning bug", "caterpillar", "ladybug", "lightning bug", "ladybug", "monarch butterfly", "june bug", "carpenter ant"]
+lesha_bugs = ["stag beetle", "earwig", "millipede", "pill bug", "june bug", "lightning bug", "dragonfly"]
+
+def make_insect_dex(mady_bugs, lesha_bugs):
+  mady_bugs_set = set(mady_bugs)
+  lesha_bugs_set = set(lesha_bugs)
+  return mady_bugs_set
+  return lesha_bugs_set
+print(make_insect_dex(mady_bugs, lesha_bugs))
+print(make_insect_dex(lesha_bugs, mady_bugs))
