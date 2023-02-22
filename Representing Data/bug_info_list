@@ -21,3 +21,29 @@ def make_insect_dex(mady_bugs, lesha_bugs):
   return lesha_bugs_set
 print(make_insect_dex(mady_bugs, lesha_bugs))
 print(make_insect_dex(lesha_bugs, mady_bugs))
+
+
+#Part 2:
+#Mady and Lesha would love to know which bugs each has caught that the other hasn't! Write a function caught_differenc2 that they can use to compare the bugs each has caught, so they can see the bugs that have only been caught by the first one of their data passed to the function.
+
+# Pseudocode: 
+# Input is 2 different list, Output is a set that does not contain duplicates or the same bugs from the other set
+# Create a function with two parameters
+# Create a variable to change each list into a set
+# Create a variable for each set to find the differences from their own set compared to the other set (by using the - difference operator)
+# Return each of the difference sets
+# Print to call each of the function to show the differences of each sets
+
+
+mady_bugs = ["lightning bug", "caterpillar", "ladybug", "lightning bug", "ladybug", "monarch butterfly", "june bug", "carpenter ant"]
+lesha_bugs = ["stag beetle", "earwig", "millipede", "pill bug", "june bug", "lightning bug", "dragonfly"]
+
+def caught_differences(mady_bugs, lesha_bugs):
+  mady_bugs_set = set(mady_bugs)
+  lesha_bugs_set = set(lesha_bugs)
+  mady_insect_dex = mady_bugs_set - lesha_bugs_set
+  lesha_insect_dex = lesha_bugs_set - mady_bugs_set
+  return mady_insect_dex
+  return lesha_insect_dex
+print(caught_differences(mady_bugs, lesha_bugs))
+print(caught_differences(lesha_bugs, mady_bugs))
