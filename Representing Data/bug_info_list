@@ -34,7 +34,6 @@ print(make_insect_dex(lesha_bugs, mady_bugs))
 # Return each of the difference sets
 # Print to call each of the function to show the differences of each sets
 
-
 mady_bugs = ["lightning bug", "caterpillar", "ladybug", "lightning bug", "ladybug", "monarch butterfly", "june bug", "carpenter ant"]
 lesha_bugs = ["stag beetle", "earwig", "millipede", "pill bug", "june bug", "lightning bug", "dragonfly"]
 
@@ -69,3 +68,26 @@ def caught_by_both(mady_bugs, lesha_bugs):
   same_bugs_caught = mady_bugs_set & lesha_bugs_set
   return same_bugs_caught
 print(caught_by_both(mady_bugs, lesha_bugs))
+
+
+# Part 4:
+# Mady and Lesha are really enjoying comparing their adventures! But now they'd love to know how many kinds of bugs they've caught in combination. They're pretty sure that they've caught a lot more bugs together than they have individually! Write a function caught_together that they can use to find all the bugs that they've caught: either only by Mady, only by Lesha, or by both of them!
+
+# Pseudocode:
+# Input: two different list, Output: two separate sets that has all the unique elements from both sets combined
+# Create a function with 2 parameters
+# Create a new variable for each list to change to a set
+# Create a new variable to combine the two sets together (using the | union operator) to show all the unique elements from both set
+# Return the new set
+# Print each of the function to show the combine unique elements for each set
+
+mady_bugs = ["lightning bug", "caterpillar", "ladybug", "lightning bug", "ladybug", "monarch butterfly", "june bug", "carpenter ant"]
+lesha_bugs = ["stag beetle", "earwig", "millipede", "pill bug", "june bug", "lightning bug", "dragonfly"]
+
+def caught_together(mady_bugs, lesha_bugs):
+  mady_bugs_set = set(mady_bugs)
+  lesha_bugs_set = set(lesha_bugs)
+  all_bugs_caught = mady_bugs_set | lesha_bugs_set
+  return all_bugs_caught
+print(caught_together(mady_bugs, lesha_bugs))
+print(caught_together(lesha_bugs, mady_bugs))
