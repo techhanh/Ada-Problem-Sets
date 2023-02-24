@@ -1,5 +1,5 @@
-#Part 1:
-#Mady and Lesha track their bug information in lists. They would love to know which unique bugs each has caught. They'd like to get some sort of insect index, sort of an InsectDex containing that unique information. Write a function `make_insect_dex` that they can use to make an InsectDex for each of them. Remember that in the InsectDex, each insect should appear only once.
+# Part 1:
+# Mady and Lesha track their bug information in lists. They would love to know which unique bugs each has caught. They'd like to get some sort of insect index, sort of an InsectDex containing that unique information. Write a function `make_insect_dex` that they can use to make an InsectDex for each of them. Remember that in the InsectDex, each insect should appear only once.
     
 mady_bugs = ["lightning bug", "caterpillar", "ladybug", "lightning bug", "ladybug", "monarch butterfly", "june bug", "carpenter ant"]
 lesha_bugs = ["stag beetle", "earwig", "millipede", "pill bug", "june bug", "lightning bug", "dragonfly"]
@@ -23,8 +23,8 @@ print(make_insect_dex(mady_bugs, lesha_bugs))
 print(make_insect_dex(lesha_bugs, mady_bugs))
 
 
-#Part 2:
-#Mady and Lesha would love to know which bugs each has caught that the other hasn't! Write a function caught_differenc2 that they can use to compare the bugs each has caught, so they can see the bugs that have only been caught by the first one of their data passed to the function.
+# Part 2:
+# Mady and Lesha would love to know which bugs each has caught that the other hasn't! Write a function caught_differenc2 that they can use to compare the bugs each has caught, so they can see the bugs that have only been caught by the first one of their data passed to the function.
 
 # Pseudocode: 
 # Input is 2 different list, Output is a set that does not contain duplicates or the same bugs from the other set
@@ -47,3 +47,25 @@ def caught_differences(mady_bugs, lesha_bugs):
   return lesha_insect_dex
 print(caught_differences(mady_bugs, lesha_bugs))
 print(caught_differences(lesha_bugs, mady_bugs))
+
+
+# Part 3:
+# Mady and Lesha's bug excitement continues unabated! They know which bugs they caught that were distinct from one another, but would like to know which bugs they caught in common. Write a function caught_by_both that they can use to find out which bugs were caught both by Mady and by Lesha.
+
+# Pseudocode
+# Input: two list with duplicates, Output: two set that shows only the duplicates from both sets
+# Create a function with 2 parameters
+# Create a new variable to change each list to its own set
+# Create a new variable to combine the two sets (by using the & intersection operator) to show the duplicate elements from both sets
+# Return the new set
+# Print the functions to show the combine elements from both sets
+
+mady_bugs = ["lightning bug", "caterpillar", "ladybug", "lightning bug", "ladybug", "monarch butterfly", "june bug", "carpenter ant"]
+lesha_bugs = ["stag beetle", "earwig", "millipede", "pill bug", "june bug", "lightning bug", "dragonfly"]
+
+def caught_by_both(mady_bugs, lesha_bugs):
+  mady_bugs_set = set(mady_bugs)
+  lesha_bugs_set = set(lesha_bugs)
+  same_bugs_caught = mady_bugs_set & lesha_bugs_set
+  return same_bugs_caught
+print(caught_by_both(mady_bugs, lesha_bugs))
