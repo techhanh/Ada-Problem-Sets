@@ -24,7 +24,7 @@ print(make_insect_dex(lesha_bugs, mady_bugs))
 
 
 # Part 2:
-# Mady and Lesha would love to know which bugs each has caught that the other hasn't! Write a function caught_differenc2 that they can use to compare the bugs each has caught, so they can see the bugs that have only been caught by the first one of their data passed to the function.
+# Mady and Lesha would love to know which bugs each has caught that the other hasn't! Write a function caught_difference that they can use to compare the bugs each has caught, so they can see the bugs that have only been caught by the first one of their data passed to the function.
 
 # Pseudocode: 
 # Input is 2 different list, Output is a set that does not contain duplicates or the same bugs from the other set
@@ -91,3 +91,29 @@ def caught_together(mady_bugs, lesha_bugs):
   return all_bugs_caught
 print(caught_together(mady_bugs, lesha_bugs))
 print(caught_together(lesha_bugs, mady_bugs))
+
+
+# Part 5:
+# Mady and Lesha made a great discovery! Their local library had a journal written by one of the greatest bug catchers ever known! It claims to have a list of all known bugs in the area. Mady and Lesha want to know how many are left for them to find! Write a function left_to_catch
+ that they can use to find out which bugs each of them has left to catch.
+
+# Pseudocode:
+# Input: 3 separate list (mady caught list, lesha caught list, and 1 journal bug list), Output: mady uncaught bugs set and lesha uncaught bugs set
+# Create a function with two parameters (caught_list and journal_bugs)
+# Create a new variable to change the caught_bugs list into a caught_set
+# Create a new variable to change the journal_bugs list into a journal_bugs_set
+# Create a new variable to find the differences (using the - operator) between the journal_bugs_set and caught_set
+# Return the variable to show the uncaught_bugs set
+# Print to call the function for each arguments to show each set of uncaught_bugs
+
+mady_bugs = ["lightning bug", "caterpillar", "ladybug", "lightning bug", "ladybug", "monarch butterfly", "june bug", "carpenter ant"]
+lesha_bugs = ["stag beetle", "earwig", "millipede", "pill bug", "june bug", "lightning bug", "dragonfly"]
+journal_bugs = ["pill bug", "damselfly", "stag beetle", "ladybug", "honey bee", "monarch butterfly", "moth", "caterpillar", "earwig", "lightning bug", "dragonfly", "stag beetle", "millipede", "june bug", "carpenter ant"]
+
+def left_to_catch(caught_list, journal_bugs):
+  caught_set = set(caught_list)
+  journal_bugs_set = set(journal_bugs)
+  uncaught_bugs = journal_bugs_set - caught_set
+  return uncaught_bugs
+print(left_to_catch(mady_bugs, journal_bugs))
+print(left_to_catch(lesha_bugs, journal_bugs))
