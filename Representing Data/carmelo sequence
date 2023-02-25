@@ -1,4 +1,4 @@
-# Part 1:
+# PART 1:
 # Carmelo has built a set of tuples, where each tuple holds the first eight values in a sequence. They need our help to write a function that can tell them whether a new sequence is one they've already seen. Write a function is_known_sequencethat Carmelo can use to find out whether they've seen this sequence before.
 
 carmelo_sequences = {
@@ -32,9 +32,45 @@ prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19]
 
 def is_known_sequence(sequence, known_sequences):
   sequence_tuple = tuple(sequence)
+  
+  
   if sequence_tuple in known_sequences:
     return True
   return False
 
 print(is_known_sequence(fibonacci_sequence, carmelo_sequences))
 print(is_known_sequence(prime_numbers, carmelo_sequences))
+
+
+# PART 2:
+# Carmelo is always looking for new, interesting properties of their sequences. They've recently been wondering whether the first and last values they stored in each of their sequences has anything interesting about them. They would like to get the first and last value returned as two values. Write a function get_first_and_last that Carmelo can use to retrieve the pair of values from the start and end of the sequence. Note that they would like to be able to use the function as follows: first, last = get_first_and_last(fibonacci_sequence)
+
+fibonacci_sequence = [1, 1, 2, 3, 5, 8, 13, 21]
+positive_even_numbers = [2, 4, 6, 8, 10, 12, 14, 16]
+prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19]
+triangular_numbers = [1, 3, 6, 10, 15, 21, 28, 36]
+
+# Pseudocode:
+# Input: 4 different list, Output: the first and last number of each list
+# Create a function with 1 parameter
+# Return the first and last index of the parameter
+# Call the function for each arguments to show the first and last element of each list
+# Print it in a specific format as per the instruction
+
+fibonacci_sequence = [1, 1, 2, 3, 5, 8, 13, 21]
+positive_even_numbers = [2, 4, 6, 8, 10, 12, 14, 16]
+prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19]
+triangular_numbers = [1, 3, 6, 10, 15, 21, 28, 36]
+
+def get_first_and_last(sequence):
+  return sequence[0], sequence[-1]
+
+# calling the function in a specific format as requested by the problem set
+first, last = get_first_and_last(fibonacci_sequence)
+print((first, last))
+first, last = get_first_and_last(positive_even_numbers)
+print((first, last))
+first, last = get_first_and_last(prime_numbers)
+print((first, last))
+first, last = get_first_and_last(triangular_numbers)
+print((first, last))
