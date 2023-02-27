@@ -9,6 +9,7 @@ For example if I had a 3, a King, and an Ace, my BlackJack score is 14 (3 + 10 +
 A hand, an array of Card values, must be between 2 and 5 items inclusive.
 When a hand's score is greater than 21, the hand is a **bust** and the player automatically loses.
 
+
 Part 1: Identifying Edge and Nominal Cases
 Identify some of the following tests cases:
 - At least two nominal cases
@@ -24,3 +25,19 @@ My edge test cases:
 2. no card/empty list
 3. ace, ace
 4. 8, joker
+
+
+Part 2: Identifying Edge and Nominal Cases
+1. Review the test cases you identified in Part 1
+2. Determine how you would test these cases
+
+My nominal test case :
+1. ten, ace - def test_return_blackjack_for_10_ace():
+2. 5, 7, 6, 2 - def test_return_20_for_5_7_6_2():
+3. queen, 5, 9 - def test_return_bust_for_queen_5_9():
+
+My edge test cases:
+1. 4, 6, 7, 9, jack, queen - def test_over_5_elements_returns_runtime_error_printed_Invalid():
+2. no card - def test_blank_or_None_argument_returns_syntax_error_printed_Invalid():    
+3. ace, ace, ace - def test_change_ace_value_of_ace_ace_ace_returns_13():
+4. 8, joker - def test_nondefined_argument_8_joker_returns_syntax_error_printed_Invalid():
