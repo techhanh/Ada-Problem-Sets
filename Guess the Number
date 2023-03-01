@@ -22,3 +22,11 @@ else:
     print("Please enter in a numeric value only.")
     
 print(random_number)
+
+
+# Part 3: The if...elif...else Statement
+# Create 4 possible outcomes:
+# if the number is higher than the random number, 
+# if the number is lower than the random number,
+# if the number is exactly the same as the random number,
+# or try again if the number is outside the minimum and maximum range
