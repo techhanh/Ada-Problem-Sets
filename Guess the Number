@@ -1,0 +1,8 @@
+# Part 1. Generate random numbers using the randint function from the random module, from 0 to 100
+import random
+
+MINUMUM_RANGE = 0
+MAXIMUM_RANGE = 100
+
+random_number = random.randint(MINUMUM_RANGE, MAXIMUM_RANGE)
+print(random_number)
