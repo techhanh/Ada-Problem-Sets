@@ -7,3 +7,18 @@
 # Example: print("four".isnumeric()) # Outputs `False``
 # if the user has input a numeric value, then it can be converted to an integer
 # if input is not, have user try again
+
+import random
+
+MINUMUM_RANGE = 0
+MAXIMUM_RANGE = 100
+
+random_number = random.randint(MINUMUM_RANGE, MAXIMUM_RANGE)
+user_input_string = input("Guess the number: ")
+
+if user_input_string.isnumeric():
+    user_input = int(user_input_string)
+else:
+    print("Please enter in a numeric value only.")
+    
+print(random_number)
