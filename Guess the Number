@@ -1,8 +1,9 @@
-# Part 1. Generate random numbers using the randint function from the random module, from 0 to 100
-import random
+# Part 1: Generate Random Numbers
+# Generate random numbers using the randint function from the random module, from 0 to 100
 
-MINUMUM_RANGE = 0
-MAXIMUM_RANGE = 100
-
-random_number = random.randint(MINUMUM_RANGE, MAXIMUM_RANGE)
-print(random_number)
+# Part 2: Getting User Input
+# using the int function with a string value results in a ValueError, Example: `int("four")
+# can use the isnumeric function to check if it is an integer (because the user can input in a word instead of the numeric value (four vs 4)
+# Example: print("four".isnumeric()) # Outputs `False``
+# if the user has input a numeric value, then it can be converted to an integer
+# if input is not, have user try again
