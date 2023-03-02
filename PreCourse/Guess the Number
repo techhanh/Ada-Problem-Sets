@@ -27,7 +27,7 @@ else:
 print(random_number)
 
 
-# Part 3: The if...elif...else Statement
+# Part 3A: The if...elif...else Statement
 # Create 4 possible outcomes:
 # if the number is higher than the random number, 
 # if the number is lower than the random number,
@@ -63,3 +63,33 @@ else:
     print("Please enter in a numeric value only.")
     
 print(f"Correct answer is: {random_number}")
+
+
+# Part 3B: Using elif statements instead of nested if else statements:
+import random
+
+import random
+
+MINUMUM_RANGE = 0
+MAXIMUM_RANGE = 100
+
+random_number = random.randint(MINUMUM_RANGE, MAXIMUM_RANGE)
+user_input_string = input("Guess the number: ")
+
+if user_input_string.isnumeric():
+    user_input = int(user_input_string)
+
+    if user_input< MINUMUM_RANGE or user_input > MAXIMUM_RANGE:
+      print(f"Please enter a number between {MINUMUM_RANGE} and {MAXIMUM_RANGE}")
+    elif user_input == random_number:
+      print("You have guess the correct number!")
+    elif user_input > random_number:
+      print("Your guess is too high.")
+    elif user_input < random_number:
+      print("Your guess is too low.")
+
+else:
+    print("Please enter in a numeric value only.")
+    
+print(f"Correct answer is: {random_number}")
+
