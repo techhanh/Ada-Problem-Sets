@@ -93,3 +93,34 @@ else:
     
 print(f"Correct answer is: {random_number}")
 
+
+ # Part 4: Turn the Guess the Number game into a function called guess_the_number
+ 
+ import random
+
+MINUMUM_RANGE = 0
+MAXIMUM_RANGE = 100
+
+# generates a random number
+random_number = random.randint(MINUMUM_RANGE, MAXIMUM_RANGE)
+
+def guess_the_number():
+  user_input_string = input("Guess the number: ") # allows the user to choose a number
+
+  if user_input_string.isnumeric(): # check if the user inputted value is a numeric value
+      user_input = int(user_input_string) # converts the user inputted value to an integer
+  else:
+    print("Please enter in a numeric value only.")
+
+  if user_input < MINUMUM_RANGE or user_input > MAXIMUM_RANGE:
+    print(f"Please enter a number between {MINUMUM_RANGE} and {MAXIMUM_RANGE}")
+  elif user_input == random_number:
+    print("You have guess the correct number!")
+  elif user_input > random_number:
+    print("Your guess is too high.")
+  elif user_input < random_number:
+    print("Your guess is too low.")
+      
+  print(f"Correct answer is: {random_number}")
+
+guess_the_number()
