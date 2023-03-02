@@ -1,3 +1,13 @@
-1. Write a function `compare`that takes two arguments, two numbers. The function has the following behavior:
+# 1. Write a function `compare`that takes two arguments, two numbers. The function has the following behavior:
     - If the first item is greater than the second, the function returns `True`.
     - If the first argument is smaller or equal to the second, the function returns `False`.
+
+def compare (num1, num2):
+  if num1 > num2:
+    return True
+  else:
+    return False
+
+print(compare(3, 7)) # False
+print(compare(7, 3)) # True
+print(compare(7, 7)) # False
