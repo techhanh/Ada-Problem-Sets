@@ -1,0 +1,3 @@
+1. Write a function `compare`that takes two arguments, two numbers. The function has the following behavior:
+    - If the first item is greater than the second, the function returns `True`.
+    - If the first argument is smaller or equal to the second, the function returns `False`.
