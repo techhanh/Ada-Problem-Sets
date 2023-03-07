@@ -11,3 +11,9 @@ def compare (num1, num2):
 print(compare(3, 7)) # False
 print(compare(7, 3)) # True
 print(compare(7, 7)) # False
+
+
+#2: Write a function `convert_mi_to_km` that takes one argument, a number `miles`. The function has the following behavior:
+- The function converts the length in miles to kilometers and returns the length in kilometers.
+- The formula for converting miles to kilometers is `miles * 1.6`.
+- *The actual conversion rate is 1.609344 but for this problem please use 1.6.*
