@@ -21,5 +21,25 @@ Tips:
         - Then return the input.
     - If the user gives valid input:
         - Then we just return the input.
-        
-        
+      
+      
+SNOWMAN_WORD = "snowman"
+
+def get_letter_from_user():
+  user_input_letter = input("Please enter a letter: ") # allows the user to choose a letter
+
+  if user_input_letter.isalpha() and len(user_input_letter) == 1: # checks if inputted value is a letter and is only 1 letter
+    return user_input_letter
+  else:
+    print("Invalid letter, please enter a single character.")
+
+def snowman():
+  user_input_letter = get_letter_from_user() # use the previous function's as an assigned value
+  if user_input_letter in SNOWMAN_WORD:
+    print("Letter found")
+    return True
+  else:
+    print("Letter not found")
+    return False
+
+snowman()
