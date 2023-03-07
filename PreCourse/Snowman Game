@@ -8,3 +8,18 @@ Directions:
 3. When the snowman is finished and the user is out of guesses, they lose the game.
 4. Use the constant SNOWMAN_WORD
 
+Tips:
+
+1. First, we will need to use `input` to get a string from the user and store it in a variable.
+2. Second, we need to check to see if the input is valid.
+    - In `get_number_from_user`, we used `isnumeric()` to ensure that the input was a number. In this function, we need to check to see if the input is a letter, and if the input contains only one letter.
+        - `letter_from_user.isalpha()` will return `True` if the string variable `letter_from_user` contains only alphabetical characters
+        - `len(letter_from_user)` will tell us the length of the string
+3. Lastly, we need to return the input string
+    - If the user gives bad input:
+        - We print "Invalid letter please enter a single character."
+        - Then return the input.
+    - If the user gives valid input:
+        - Then we just return the input.
+        
+        
