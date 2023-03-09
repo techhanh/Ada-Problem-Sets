@@ -124,3 +124,10 @@ def guess_the_number():
   print(f"Correct answer is: {random_number}")
 
 guess_the_number()
+
+
+Part 5:
+
+# Exercise: Breaking Up `guess_the_number` into multiple Helper Functions
+    1. create a function to get the user input
+    2. create another function to process the user input
