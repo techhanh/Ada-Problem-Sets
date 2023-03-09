@@ -1,5 +1,4 @@
 # Part 1
-
 Directions:
 1. The user is presented with a list of underscores "_". Each Underscore represents one letter in a word.
 2. The user guesses letters for the hidden word
@@ -45,7 +44,6 @@ snowman()
 
 
 # Part 2
-
 Directions:
 Create another function call snowman. Check if the letter is in the word or not. To do that, we're going to use the python keyword `in`. The syntax for `in` is `thing1 in thing2`. This expression evaluates to `True` if `thing2` contains `thing1`, and false otherwise. We can use it in a conditional expression as `if thing1 in thing2:`.
 1. First, use `get_letter_from_user` to get a letter
