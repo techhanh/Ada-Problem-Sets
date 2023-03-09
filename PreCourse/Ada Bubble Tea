@@ -1,3 +1,58 @@
 # Ada Bubble Tea needs help creating `drink_summary` for their online order display. Each drink has three options: tea flavor, milk, and boba. 
 # The tea flavor options are *oolong* ($4.50), *jasmine* ($4.50), and *silver needle* ($5.00). The milk options are *none* ($0.00), *dairy* ($0.50), *oat* ($0.75), and *soy* ($0.50). The boba options are *yes* ($0.50), and *no* ($0.00).
 # Create the helper function `calculate_total`. It takes in 3 parameters representing the order, and calculates the total to be used in `drink_summary`.
+
+
+# Pseudocode:
+# using helper function to break into 2 steps
+# step 1 is to define the total cost between tea, milk, and boba
+# create a new variable to store the dict for the tea choices with its price
+# create a new variable to find the cost for the dict's key (the tea choices) value (the tea parameter) pair (the argument will replace the parameter later on to show exact cost)
+# repeat the last 2 steps for milk and boba
+# add up the total for the cost of the tea, milk, and boba
+# return the total to show its value
+
+# step 2 is to define a summarize the drink's cost for each order
+# create a new variable to show the drink summary for each order by using the previous defined function and its 3 parameters
+# return the summary total cost to show its value
+# use the print function to show the drink summary heading
+# create a new variable for each order and call the drink summary with its 3 arguments
+
+def calculate_total(tea, milk, boba):
+
+  tea_choice = {
+    "oolong": 4.50,
+    "jasmine": 4.50,
+    "silver_needle": 5.00
+  }
+
+  tea_cost = tea_choice[tea]
+
+  milk_choice = {
+      "none": 0.00,
+      "dairy": .50,
+      "oat": .75,
+      "soy": .50
+  }
+
+  milk_cost = milk_choice[milk]
+
+  boba_choice = {
+      "yes": .50,
+      "no": 0.00
+  }
+
+  boba_cost = boba_choice[boba]
+
+  total = tea_cost + milk_cost + boba_cost
+  return total
+
+def drink_summary(tea, milk, boba):
+  summary_total_cost = calculate_total(tea, milk, boba)
+  return summary_total_cost
+
+print("*** Drink Summary ***")
+order1 = drink_summary("oolong", "none", "yes")
+print(f"order 1: {order1}")
+order2 = drink_summary("silver_needle", "oat", "yes")
+print(f"order 2: {order2}")
