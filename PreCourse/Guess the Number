@@ -66,7 +66,6 @@ print(f"Correct answer is: {random_number}")
 
 
 # Part 3B: Using elif statements instead of nested if else statements:
-import random
 
 import random
 
@@ -126,8 +125,41 @@ def guess_the_number():
 guess_the_number()
 
 
-Part 5:
-
+# Part 5:
 # Exercise: Breaking Up `guess_the_number` into multiple Helper Functions
     1. create a function to get the user input
     2. create another function to process the user input
+    
+ import random
+
+MINUMUM_RANGE = 0
+MAXIMUM_RANGE = 100
+
+# generates a random number
+random_number = random.randint(MINUMUM_RANGE, MAXIMUM_RANGE)
+
+def get_number_from_user():
+  user_input_string = input("Guess the number: ") # allows the user to choose a number
+
+  if user_input_string.isnumeric(): # check if the user inputted value is a numeric value
+      user_input = int(user_input_string) # converts the user inputted value to an integer
+  else:
+    print("Please enter in a numeric value only.")
+
+  return user_input # need to return the user input or else the function cannot see what the user has inputted in
+
+def guess_the_number():
+  user_input = get_number_from_user() # calling the previous function to get its return value 
+
+  if user_input < MINUMUM_RANGE or user_input > MAXIMUM_RANGE:
+    print(f"Please enter a number between {MINUMUM_RANGE} and {MAXIMUM_RANGE}")
+  elif user_input == random_number:
+    print("You have guess the correct number!")
+  elif user_input > random_number:
+    print("Your guess is too high.")
+  elif user_input < random_number:
+    print("Your guess is too low.")
+      
+  print(f"Correct answer is: {random_number}")
+
+guess_the_number()
