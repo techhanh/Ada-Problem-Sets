@@ -1,0 +1,48 @@
+# Write a function `am_i_speeding` that takes in a `speed` in units of kilometers per hour and a `speed_limit` in units of miles per hour. The function `am_i_speeding` should return
+    - `True` if you are speeding
+    - `False` if you are are not speeding
+    - `None` if `speed` or `speed_limit` is not a float or an int.
+    The function `am_i_speeding` should use the following provided helper functions:
+    - `convert_km_to_mi` to convert the `speed` to a mi/hr
+    - `validate_num` to validate that `speed` and `speed_limit` are a float or an int.
+    
+    
+# pseudocode:
+# define the first function to validate if the given speed in km is an int or a float
+# if speed is an int or a float
+# then return True
+# else return False
+# define a second function to convert the given speed that is in km to a new speed in mi
+# create a variable to store the conversion formula
+# return that variable to show the converted value of speed in mi
+# define a third function to test if speed is over the speed limit
+# if given speed in validate speed or speed_limit in validate speed is not a float or int
+# then return None
+# if speed in convering from km to mi is greater than speed_limit (already is in mi so no conversion needed)
+# then return True
+# else return False
+
+
+def validate_speed(speed_in_km):
+  if isinstance(speed_in_km, int) or isinstance(speed_in_km, float):
+    return True
+  else:
+    return False
+
+def convert_km_to_mi(speed_in_km):
+  speed_in_mi = speed_in_km * .62137
+  return speed_in_mi
+
+def am_i_speeding(speed, speed_limit):
+  if not validate_speed(speed) or not validate_speed(speed_limit):
+    return None
+
+  if convert_km_to_mi(speed) > speed_limit:
+    return True
+  else:
+    return False 
+
+print(am_i_speeding(100, 50.1))
+print(am_i_speeding(80, 55))
+print(am_i_speeding("hello", 55))
+print(am_i_speeding(100, "hello"))
