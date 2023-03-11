@@ -1,0 +1,26 @@
+# Write a function `print_ten` that takes one argument, a string. The function has the following behavior:
+    - The function returns a string that repeats a counter number (starting at 1) and then the string ten times (all in 1 string)
+    - The function can use either a while loop or a for loop, but it must use a loop
+
+
+# pseudocode
+# define the function name with one parameter
+# create a counter variable and assign it as 1 to start the count
+# create a result variable to store a blank string in (this is use to increment itself later)
+# create a while loop and set the counter to exclusively 11 (so output will be from 1 to 10)
+# to repeat the string, use the result variable to concentrate together that variable, the counter variable (that is formatted to a string), an empty space string (to separate the previous count from the string), the parameter, and another empty space string (to separate the string from the next incremental count)
+# to increment the count, use the count variable to increment itself by 1
+# return the result variable to get the output
+# print and call the function with its argument to show the final output
+
+def print_ten(string):
+  counter = 1
+  result = ""
+  while counter < 11:
+    result += str(counter) + " " + string + " "
+    counter += 1
+  return result
+
+print(print_ten("snow"))
+print(print_ten(""))
+print(print_ten("123"))

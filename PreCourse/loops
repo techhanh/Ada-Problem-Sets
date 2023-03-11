@@ -1,3 +1,0 @@
-# Write a function `print_ten` that takes one argument, a string. The function has the following behavior:
-    - The function returns a string that repeats a counter number (starting at 1) and then the string ten times (all in 1 string)
-    - The function can use either a while loop or a for loop, but it must use a loop
