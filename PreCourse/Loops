@@ -3,7 +3,7 @@
     - The function can use either a while loop or a for loop, but it must use a loop
 
 
-# pseudocode
+# pseudocode with while loops
 # define the function name with one parameter
 # create a counter variable and assign it as 1 to start the count
 # create a result variable to store a blank string in (this is use to increment itself later)
@@ -19,6 +19,25 @@ def print_ten(string):
   while counter < 11:
     result += str(counter) + " " + string + " "
     counter += 1
+  return result
+
+print(print_ten("snow"))
+print(print_ten(""))
+print(print_ten("123"))
+
+
+# pseudocode with for loops
+# define a function name with one parameter
+# create a variable to store a blank string in (this is use to increment itself later)
+# use a for loop with an iterated value in range of 1 inclusive to 11 exclusive to get the 10 count
+# to increment the count and repeat the string, use the variable previously created to concentrate together that variable, the iterated value (that is formatted to a string), an empty space string (to separate the previous count from the string), the parameter, and another empty space string (to separate the string from the next incremental count)
+# return the variable to get the output
+# print and call the function with its argument to show the final output
+
+def print_ten(string):
+  result = ""
+  for word in range(1, 11):
+    result += str(word) + " " + string + " "
   return result
 
 print(print_ten("snow"))
