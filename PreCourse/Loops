@@ -47,3 +47,25 @@ print(print_ten("123"))
 #2 Write a function `print_multiple` that takes two argument, a string `word` and a number `amount`. The function has the following behavior:
     - The function returns a string that repeats a counter number (starting at 1) and then the string `amount` number of times
     - The function can use either a while loop or a for loop, but it must use a loop
+    
+# pseudocode with while loop
+# define the function name with the word and the amount parameter
+# create a counter variable and assign it as 1 to start the count
+# create a result variable to store a blank string in (this is use to increment itself later)
+# create a while loop and set the counter to be less than and including the amount parameter (so output will be from 1 to 10)
+# to repeat the string, use the result variable to concentrate together that variable, the counter variable (that is formatted to a string), an empty space string (to separate the previous count from the string), the word parameter, and another empty space string (to separate the string from the next incremental count)
+# to increment the count, use the count variable to increment itself by 1
+# return the result variable to get the output
+# print and call the function with its argument to show the final output
+
+def print_multiple(word, amount):
+  counter = 1
+  result = " "
+  while counter <= amount:
+    result += str(counter) + " " + word + " "
+    counter += 1
+  return result
+
+print(print_multiple("snow", 4))
+print(print_multiple(" ", 7))
+print(print_multiple("123", 11))
