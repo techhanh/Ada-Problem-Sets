@@ -163,3 +163,8 @@ def guess_the_number():
   print(f"Correct answer is: {random_number}")
 
 guess_the_number()
+
+
+# Part 6:
+Use a flag controlled while loop to repeat the process of asking for user input until it is a numeric value.
+(A "flag" is a term for a boolean variable that is set before we enter the loop, and then at some point will be flipped inside the loop to signal that the loop should end (and that the whatever action the loop was trying to accomplish has been completed)
