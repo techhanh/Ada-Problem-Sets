@@ -1,7 +1,6 @@
-# Write a function `print_ten` that takes one argument, a string. The function has the following behavior:
+#1 Write a function `print_ten` that takes one argument, a string. The function has the following behavior:
     - The function returns a string that repeats a counter number (starting at 1) and then the string ten times (all in 1 string)
     - The function can use either a while loop or a for loop, but it must use a loop
-
 
 # pseudocode with while loops
 # define the function name with one parameter
@@ -43,3 +42,8 @@ def print_ten(string):
 print(print_ten("snow"))
 print(print_ten(""))
 print(print_ten("123"))
+
+
+#2 Write a function `print_multiple` that takes two argument, a string `word` and a number `amount`. The function has the following behavior:
+    - The function returns a string that repeats a counter number (starting at 1) and then the string `amount` number of times
+    - The function can use either a while loop or a for loop, but it must use a loop
