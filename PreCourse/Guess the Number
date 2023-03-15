@@ -168,3 +168,35 @@ guess_the_number()
 # Part 6:
 Use a flag controlled while loop to repeat the process of asking for user input until it is a numeric value.
 (A "flag" is a term for a boolean variable that is set before we enter the loop, and then at some point will be flipped inside the loop to signal that the loop should end (and that the whatever action the loop was trying to accomplish has been completed)
+
+# pseudocode:
+# define a function name to get a number from the user
+# create a variable as attemping a valid input and assigned it as True (so the condition of the while loop must be met for the function to execute correctly)
+# (the while loop will not run if the statement turns out to be False)
+# create a variable to set the user input to be None (will continue to be False if the user does not input any value at all)
+# use a while loop for the attempting valid input variable
+# create another variable to allow the user to input a value in
+# create an if statement to check if the user input value is a numeric value or not
+# use the user input variable to convert the user input value to an integer (it will be outputted as a numeric value later when it is returned)
+# assigned the attemping valid input variable as False (so the while loop will stop as long as the if conditions are met/True)
+# use an else statement to print a statement telling the user what to do if the user input value is not an integer
+# return the user input to output the numeric value that was inputted in by the user
+# call the function
+
+def get_number_from_user():
+  attempt_valid_input = True
+  user_input = None
+
+  while attempt_valid_input: 
+    user_input_value = input("Guess the number: ")
+
+    if user_input_value.isnumeric():
+      user_input = int(user_input_value)
+      attempt_valid_input = False
+
+    else:
+      print("Please enter in a numeric value only.")
+
+  return user_input
+
+get_number_from_user()
