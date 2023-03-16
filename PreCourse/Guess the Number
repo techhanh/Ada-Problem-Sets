@@ -242,3 +242,83 @@ guess_the_number()
 # Part 7B
 # Add a while loop with a flag that tests to see if the user has guessed the correct number with a limited number of guess attempt allowed.
 
+# pseudocode Part 1:
+# import random module to use the random function
+# create a minumum range and a maximum range variable and assign both values to it
+# create a variable to be a random number that generates a random generator with a minumum and maximum range
+# define a function name to guess the number
+# create a variable to continue guessing the number and assigned it to be True (while loop will continue to run it hits the False statement)
+# set up the while loop with the continue guessing the number variable
+# create a new variable to get the user input and assigned the previous function get_number_from_user to it
+# use an if statement to set the user input to be between the minimum and maximum range (or else print a statement telling the user to enter a number between the min and max range)
+# use an elif statement to check if the user input is equal to the random number generated (then create a print statement to show it was guess correctly)
+# assign the continue guess variable to be False (so the while loop can exit/stop when the guess number matches that of the random number generated)
+# use an elif statement to check if the user input is greater than the random number (then create a print statement if the guess is too high)
+# use an elif statement to check if the user input is less than the random number (then create a print statement if the guess is too low)
+
+
+# Part 1
+import random
+
+MINUMUM_RANGE = 0
+MAXIMUM_RANGE = 100
+random_number = random.randint(MINUMUM_RANGE, MAXIMUM_RANGE)
+
+def get_number_from_user():
+  attempt_valid_input = True
+  user_input = None
+
+  while attempt_valid_input: 
+    user_input_value = input("Guess the number: ")
+
+    if user_input_value.isnumeric():
+      user_input = int(user_input_value)
+      attempt_valid_input = False
+
+    else:
+      print("Please enter in a numeric value only.")
+
+  return user_input
+
+# pseudocode Part 2:
+# set up a constant for maximum number of guesses allowed and assign an integer to it
+# define a function name to guess the number
+# create a variable to continue guessing the number and assigned it to be True (while loop will continue to run it hits the False statement)
+# create a new variable and assign 0 to start the number of guesses
+# set up the while loop where the continue guessing the number variable and the num of guesses variable is less than the maximum guess allowed constant
+# to increment the number of guesses, assign that variable to itself and add by 1
+# create a new variable to get the user input and assigned the previous function get_number_from_user to it
+# use an if statement to check if the user input is equal to the random number generated (then create a print statement to show it was guess correctly)
+# assign the continue guess variable to be False (so the while loop can exit/stop if the guess number matches that of the random number generated)
+# use an elif statement to set the user input to be between the minimum and maximum range (or else print a statement telling the user to enter a number between the min and max range)
+# use an elif statement to check if the user input is greater than the random number (then create a print statement if the guess is too high)
+# use an elif statement to check if the user input is less than the random number (then create a print statement if the guess is too low)
+# set up a new if statement (this is outside of the while loop) to check the continue guess number variable (then create a print statement if the user has run out of guess attempts)
+# call the function to execute it
+
+
+# Part 2
+MAX_GUESS_ALLOWED = 20
+
+def guess_the_number():
+  continue_guess_number = True
+  num_guesses = 0
+
+  while continue_guess_number and num_guesses < MAX_GUESS_ALLOWED:
+    num_guesses += 1
+    user_input = get_number_from_user()
+
+    if user_input == random_number:
+      print("You have guess the correct number!")
+      continue_guess_number = False
+    elif user_input < MINUMUM_RANGE or user_input > MAXIMUM_RANGE:
+      print(f"Please enter a number between {MINUMUM_RANGE} and {MAXIMUM_RANGE}")
+    elif user_input > random_number:
+      print("Your guess is too high.")
+    elif user_input < random_number:
+      print("Your guess is too low.")
+
+  if continue_guess_number:
+    print(f"You ran out of guesses!\nThe correct answer was {random_number}.")
+
+guess_the_number()
