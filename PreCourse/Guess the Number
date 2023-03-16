@@ -93,7 +93,7 @@ else:
 print(f"Correct answer is: {random_number}")
 
 
- # Part 4: Turn the Guess the Number game into a function called guess_the_number
+# Part 4: Turn the Guess the Number game into a function called guess_the_number
  
  import random
 
@@ -202,7 +202,7 @@ def get_number_from_user():
 get_number_from_user()
 
 
-# Part 7
+# Part 7A
 # Add a while loop with a flag that tests to see if the user has guessed the correct number with unlimited guesses.
 
 # pseudocode:
@@ -237,3 +237,8 @@ def guess_the_number():
       print("Your guess is too low.")
 
 guess_the_number()
+
+
+# Part 7B
+# Add a while loop with a flag that tests to see if the user has guessed the correct number with a limited number of guess attempt allowed.
+
