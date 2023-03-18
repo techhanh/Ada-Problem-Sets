@@ -102,3 +102,39 @@ get_letter_from_user()
 - Use the helper function get_letter_from_user to get user input in the loop.
 - Track the number of correct and incorrect guesses, adding one to the proper counter when the user makes a guess.
 - When finish, print out, “You made X correct and Y incorrect guesses”, where X and Y are the number of correct and incorrect guesses.
+
+SNOWMAN_WORD = "snowman"
+
+def get_letter_from_user():
+  attempt_valid_input = True
+  user_input_letter = None
+
+  while attempt_valid_input:
+    user_input_letter = input("Please enter a letter: ") # allows the user to choose a letter
+
+    if user_input_letter.isalpha() and len(user_input_letter) == 1: # checks if inputted value is a letter and is only 1 letter
+      attempt_valid_input = False
+
+      return user_input_letter
+    else:
+      print("Invalid input, please enter a single alphabetical character only.")
+
+
+SNOWMAN_WRONG_GUESS_ALLOWED = 7
+
+def snowman():
+  continue_guess_letter = True
+  correct_guess = 0
+  wrong_guess = 0
+
+  while wrong_guess < SNOWMAN_WRONG_GUESS_ALLOWED and correct_guess < len(SNOWMAN_WORD):
+    user_input_letter = get_letter_from_user() # use the previous function's as an assigned value
+
+    if str(user_input_letter) in SNOWMAN_WORD:
+      correct_guess += 1
+    else:
+      wrong_guess += 1
+      
+  print(f"You made {correct_guess} correct guess and {wrong_guess} wrong guess attempts.")  
+
+snowman()
