@@ -93,3 +93,12 @@ def get_letter_from_user():
       print("Invalid letter, please enter a single alphabetical character only.")
 
 get_letter_from_user()
+
+
+# Part 3B
+- Add a loop to the function snowman.
+- Add two counters:  correct_guess and wrong_guess.
+- Adjust the loop to allow the user to continue to guess until they reach the SNOWMAN_WRONG_GUESS constant. If the number of correct_guess is equal to the length of SNOWMAN_WORD, then the word has been guessed correctly and the user should no longer be able to submit anymore guesses.
+- Use the helper function get_letter_from_user to get user input in the loop.
+- Track the number of correct and incorrect guesses, adding one to the proper counter when the user makes a guess.
+- When finish, print out, “You made X correct and Y incorrect guesses”, where X and Y are the number of correct and incorrect guesses.
