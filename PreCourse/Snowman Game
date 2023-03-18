@@ -77,3 +77,19 @@ snowman()
 
 # Part 3A
 Add a while loop to the function get_letter_from_user.
+
+SNOWMAN_WORD = "snowman"
+
+def get_letter_from_user():
+  attempt_valid_input = True
+  user_input_letter = None
+
+  while attempt_valid_input:
+    user_input_letter = input("Please enter a letter: ") # allows the user to choose a letter
+
+    if user_input_letter.isalpha() and len(user_input_letter) == 1: # checks if inputted value is a letter and is only 1 letter
+      return user_input_letter
+    else:
+      print("Invalid letter, please enter a single alphabetical character only.")
+
+get_letter_from_user()
