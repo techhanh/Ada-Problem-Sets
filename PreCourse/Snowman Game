@@ -138,3 +138,11 @@ def snowman():
   print(f"You made {correct_guess} correct guess and {wrong_guess} wrong guess attempts.")  
 
 snowman()
+
+
+# Part 3C
+- Define another function to draw the snowman. Add these ASCII snowman drawing constants to the top of the code file. For each wrong guess, we will want to add a new element to the drawing. The goal is to have a helper function that is use to pass the wrong_guess count value to it and it will draw the appropriate amount of the snowman. (For example, if the WRONG_GUESS_ALLOWED reaches 7, then the SNOWMAN_7 drawing will be printed.
+- Now we're going to add a for loop inside this function to make it draw not just one element of the snowman, but all of the elements
+  (use for loop since we know exactly how many times the loop needs to repeat (which is the the number of times the WRONG_GUESS_ALLOWED is assigned to)
+- The next step is to modify the range of our for loop to only print the elements that we want. For Snowman, we want to draw our snowman from the ground up, so if we have only 1 incorrect guess, we want to print the last element, 2 incorrect guesses means the last two elements, and so on. Our function should take in the number of incorrect guesses and use that value in the range to draw the elements of the snowman in the order that we want.
+- Finally, inside of the `snowman`function, add the `print_snowman`function call to the game loop to print out the current state of the snowman to the user after each guess.
