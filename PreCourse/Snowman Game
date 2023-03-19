@@ -146,3 +146,12 @@ snowman()
   (use for loop since we know exactly how many times the loop needs to repeat (which is the the number of times the WRONG_GUESS_ALLOWED is assigned to)
 - The next step is to modify the range of our for loop to only print the elements that we want. For Snowman, we want to draw our snowman from the ground up, so if we have only 1 incorrect guess, we want to print the last element, 2 incorrect guesses means the last two elements, and so on. Our function should take in the number of incorrect guesses and use that value in the range to draw the elements of the snowman in the order that we want.
 - Finally, inside of the `snowman`function, add the `print_snowman`function call to the game loop to print out the current state of the snowman to the user after each guess.
+
+# The ASCII snowman drawing:
+SNOWMAN_1 = '*   *   *  '
+SNOWMAN_2 = ' *   _ *   '
+SNOWMAN_3 = '   _[_]_ * '
+SNOWMAN_4 = '  * (")    '
+SNOWMAN_5 = '  \( : )/ *'
+SNOWMAN_6 = '* (_ : _)  '
+SNOWMAN_7 = '-----------'
