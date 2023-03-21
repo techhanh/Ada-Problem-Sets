@@ -1,0 +1,4 @@
+# 1. Write a function `find_index_of_item` that takes two arguments, an item and a list called list_of_items. The function has the following behavior:
+- If the list contains the item, the function returns the index of the item in the list.
+- If the list contains the item multiple times, the function returns the index of the first time the item appears in the list.
+- If the list does not contain the item, the function returns -1.
