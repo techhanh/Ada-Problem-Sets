@@ -172,3 +172,116 @@ SNOWMAN_7 = '-----------'
 # (if haven't done yet), call the draw snowman function with the wrong guess argument at the end of the else statement in Part 2
 # at the end of your code, call the snowman function to run all 3 functions together
 
+# pseudocode for Part 3A:
+# create a snowman word variable and assign a string to it (the user will try to guess this word)
+# create another variable to allow the number of wrong guesses allowed for this string
+# create your drawing and and assign it to each new variable
+# define a function name to get a letter from the user
+# create a new variable to check the letter inputted in and set it as True (this will use to check later if the character inputted in fulfil the condition set up or not)
+# set up a while loop to check the leter inputted in (the while loop will remain true until the attempt valid input variable is False)
+# within the while loop action block, create another variable to get the user input letter and assign the input function to it. Include the instructions telling the user what to
+# create an if statement (inside the while loop) to check if the user input letter is an alpha and the length of the user input letter is equal to 1
+# (if this true), set the check letter inputted variable to False (so the while loop will exit if the if statement fulfills both the condition)
+# return the user input letter so the function can output it
+# (if one of the 2 condition is false) create an else statement to print a statement telling the user how to fulfill both of the conditions 
+
+
+# PART 3A
+SNOWMAN_WORD = "snowman"
+WRONG_GUESS_ALLOWED = 7
+
+SNOWMAN_1 = '*   *   *  '
+SNOWMAN_2 = ' *   _ *   '
+SNOWMAN_3 = '   _[_]_ * '
+SNOWMAN_4 = '  * (")    '
+SNOWMAN_5 = '  \( : )/ *'
+SNOWMAN_6 = '* (_ : _)  '
+SNOWMAN_7 = '-----------'
+
+
+def get_letter_from_user():
+  check_letter_inputted = True
+
+  while check_letter_inputted:
+    user_input_letter = input("Please enter one letter: ")
+
+    if user_input_letter.isalpha() and len(user_input_letter) == 1:
+      check_letter_inputted = False
+
+      return user_input_letter
+    else:
+      print("Invalid input, please enter a single alphabetical character only.")
+
+
+# pseudocode for Part 3B:
+# define a snowman function
+# create a correct guess variable and assign it to start the count at 0
+# create a wrong guess variable and assign it to start the count at 0
+# set up a while loop and set the condition where the wrong guess variable is less than the wrong guess allowed constant
+# within the while loop action block, use the user input letter variable (that was created in part 1), and assign the previous function name to it
+# create an if statement with the user input letter to check if it is in the snowman word constant
+# (if it is) create a print statement to show the letter was guess correctly
+# to increment the number of correct guess, asssign the correct guess variable to itself and increment it by 1
+# (if it is not) create an else statement and print the statement to show that the user input leter is not in the word
+# to increment the number of wrong guess, assign the wrong guess variable to itself and increment it by 1
+# call the draw snowman function with the wrong guess as an argument (this function will be created later in Part 3) (the step is to output each of the snowman drawing for every wrong guess)
+# print a statement telling the user what the final correct guess and wrong guess counts are (this step is outside of the while loop)
+
+
+# PART 3B
+def snowman():
+  correct_guess = 0
+  wrong_guess = 0
+
+  while wrong_guess < WRONG_GUESS_ALLOWED:
+    user_input_letter = get_letter_from_user()
+
+    if user_input_letter in SNOWMAN_WORD:
+      print("You guessed a correct letter that's in the word. Keep going!\n")
+      correct_guess += 1
+    else:
+      print(f"The letter {user_input_letter} is not in the word. Try a different letter!\n")
+      wrong_guess += 1
+    draw_snowman(wrong_guess)
+      
+  print(f"Game Over!\nYou made {correct_guess} correct guess and {wrong_guess} wrong guess attempts.")  
+
+
+# pseucode for Part 3C:
+# define a draw snowman function with a wrong guess attempt parameter
+# create a for loop with the iterated value is in range (the for loop is use in part 3 because there is a known amount of repetition involve, which is the number of wrong guess allowed)
+# set the start of the range to be the wrong guess allowed variable + 1 minus the wrong guess attempt variable (this is so the previous drawing is not repeating itself and only continuing on from where the drawing last left off at)
+# set end of the range to be the wrong guess allowed variable + 1 (the +1 is to make it inclusive of the last wrong guess allowed value)
+# under the for loop, create an if statement where the iterated value is equal to 1 and create a print statement with the first part of the snowman variable
+# create an elif statement and set the iterated value to equal to 2 and create a print statement with the second part of the snowman variable
+# create an elif statement and set the iterated value to equal to 2 and create a print statement with the third part of the snowman variable
+# create an elif statement and set the iterated value to equal to 2 and create a print statement with the fourth part of the snowman variable
+# create an elif statement and set the iterated value to equal to 2 and create a print statement with the fifth part of the snowman variable
+# create an elif statement and set the iterated value to equal to 2 and create a print statement with the sixth part of the snowman variable
+# create an elif statement and set the iterated value to equal to 2 and create a print statement with the seventh part of the snowman variable
+# (if haven't done yet), call the draw snowman function with the wrong guess argument at the end of the else statement in Part 2
+# at the end of your code, call the snowman function to run all 3 functions together
+
+
+# PART 3C
+def draw_snowman(wrong_guess_attempt):
+
+  for i in range(WRONG_GUESS_ALLOWED + 1 - wrong_guess_attempt, WRONG_GUESS_ALLOWED + 1):
+    if i == 1:
+      print(SNOWMAN_1)
+    elif i == 2:
+      print(SNOWMAN_2)
+    elif i == 3:
+      print(SNOWMAN_3)    
+    elif i == 4:
+      print(SNOWMAN_4)   
+    elif i == 5:
+      print(SNOWMAN_5)
+    elif i == 6:
+      print(SNOWMAN_6)
+    elif i == 7:
+      print(SNOWMAN_7)
+
+
+snowman()
+
