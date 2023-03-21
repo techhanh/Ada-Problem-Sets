@@ -14,3 +14,15 @@
 # increment the number of times an item appears in the list to itself and increase it by 1
 # (outside of the loop function) return the item not in list variable
 # call the function with the arguments
+
+# scenario 1:
+def find_index_of_item(item, list_of_items):
+  num_of_times_item_appears_in_list = 0
+  item_not_in_list = -1
+
+  for index in list_of_items:
+    if index == item:
+      return num_of_times_item_appears_in_list
+    num_of_times_item_appears_in_list += 1
+
+  return item_not_in_list
