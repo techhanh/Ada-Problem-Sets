@@ -36,3 +36,13 @@ def find_index_of_item(item, list_of_items):
 # (if it does) return the index
 # (outside of the for loop) return the not in list variable
 # call the function with the arguments
+
+# scenario 2:
+def find_index_of_item(item, list_of_items):
+	item_not_in_list = -1
+
+	for i in range(len(list_of_items)):
+		if list_of_items[i] == item:
+			return i
+
+	return item_not_in_list
