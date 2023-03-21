@@ -2,3 +2,15 @@
 - If the list contains the item, the function returns the index of the item in the list.
 - If the list contains the item multiple times, the function returns the index of the first time the item appears in the list.
 - If the list does not contain the item, the function returns -1.
+
+
+# pseudocode for scenario 1:
+# define the function with the 2 parameters (the item and the list of items)
+# create a variable to show the number of times an item appears in the list and set it to start count at 0
+# create a variable to show the item not in the list and set it as -1 (per instruction requesting to return it as -1)
+# create a for loop to go through each of the element/index in the list of items
+# (under the for loop) use an if statement to check if the element/index matches the item
+# (if it does) return the number of times an item appears in the list variable
+# increment the number of times an item appears in the list to itself and increase it by 1
+# (outside of the loop function) return the item not in list variable
+# call the function with the arguments
