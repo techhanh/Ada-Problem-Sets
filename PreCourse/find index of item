@@ -58,3 +58,21 @@ def find_index_of_item(item, list_of_items):
 # increment the number of times an item appears in the list variable to itself and increase it by 1
 # (outside of the while loop) return the item not in list variable
 # call the function with the arguments
+
+# scenario 3:
+def find_index_of_item(item, list_of_items):
+  num_of_times_item_appears_in_list = 0
+  item_not_in_list = -1
+
+  while num_of_times_item_appears_in_list < len(list_of_items):
+    if list_of_items[num_of_times_item_appears_in_list] == item:
+      return num_of_times_item_appears_in_list
+    num_of_times_item_appears_in_list += 1
+
+  return item_not_in_list
+
+
+print(find_index_of_item(3, [1, 4, 5, 6, 2, 3, 9])) # (index at) 5
+print(find_index_of_item("cat", ["dog", "cow", "goat", "pig"])) # -1
+print(find_index_of_item("chocolate", [])) # -1
+print(find_index_of_item(-93, [1, 30, -93, 99, -3, -93, 25, 16])) # 2
