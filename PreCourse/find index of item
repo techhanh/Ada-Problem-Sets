@@ -46,3 +46,15 @@ def find_index_of_item(item, list_of_items):
 			return i
 
 	return item_not_in_list
+
+
+# pseudocode for scenario 3:
+# define the function with the 2 parameters (the item and the list of items)
+# create a variable to show the number of times an item appears in the list and set it to start count at 0
+# create a variable to show the item not in the list and set it as -1 (per instruction requesting to return it as -1)
+# create a while loop with the number of times an item appears in the list variable and assign it to be less than the length of the list of items (this is set as true and will run until it is no longer true)
+# (under the while loop) use an if statement to check if the number of times an item appears in the list variable that is inside of the list of items matches the item
+# (if it does) return the number of times an item appears in the list variable
+# increment the number of times an item appears in the list variable to itself and increase it by 1
+# (outside of the while loop) return the item not in list variable
+# call the function with the arguments
