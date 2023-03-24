@@ -19,3 +19,13 @@ def count_item_in_list(item, list_of_items):
 		if i == item:
 			num_of_times_item_appears_in_list += 1
 	return num_of_times_item_appears_in_list
+	
+
+# pseudocode for scenario 2:
+# define the function with the 2 parameters (the item and the list of items)
+# create a variable to show the number of times an item appears in the list and set this count as 0
+# create a for loop with the element/index in range (to create a sequence of the elements) in len (up to the length) of the list of items parameter
+# (under the for loop) use an if statement to check if the element/index that is inside the list of items matches the item
+# (if it does) increment the number of times an item appears in the list variable to itself and increase by 1
+# (outside of the for loop) return the number of times an item appears in list variable
+# call the function with the arguments
