@@ -29,3 +29,13 @@ def count_item_in_list(item, list_of_items):
 # (if it does) increment the number of times an item appears in the list variable to itself and increase by 1
 # (outside of the for loop) return the number of times an item appears in list variable
 # call the function with the arguments
+
+# scenario 2:
+def count_item_in_list(item, list_of_items):
+	num_of_times_item_appears_in_list = 0
+
+	for i in range(len(list_of_items)):
+		if list_of_items[i] == item:
+			num_of_times_item_appears_in_list += 1
+
+	return num_of_times_item_appears_in_list
