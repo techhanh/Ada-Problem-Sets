@@ -1,3 +1,12 @@
 # Write a function `count_item_in_list` that takes two arguments, an item and a list called list_of_items. The function has the following behavior:
     - The function returns the number of times the item appears in the list
     - If the list does not contain the item, the function returns 0 .
+    
+# pseudocode for scenario 1:
+# define the function with the 2 parameters (the item and the list of items)
+# create a variable to show the number of times an item appears in the list and set this count as 0
+# create a for loop to go through all the elements/index in the list of items
+# (under the for loop) use an if statement to check if the elements/index matches the item
+# (if it does) increment the number of times an item appears in list variable to itself and increase by 1
+# (outside of the for loop) return the number of times an item appear in list variable
+# call the function with the arguments
