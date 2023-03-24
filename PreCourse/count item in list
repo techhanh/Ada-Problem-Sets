@@ -10,3 +10,12 @@
 # (if it does) increment the number of times an item appears in list variable to itself and increase by 1
 # (outside of the for loop) return the number of times an item appear in list variable
 # call the function with the arguments
+
+# scenario 1:
+def count_item_in_list(item, list_of_items):
+	num_of_times_item_appears_in_list = 0
+
+	for i in list_of_items:
+		if i == item:
+			num_of_times_item_appears_in_list += 1
+	return num_of_times_item_appears_in_list
