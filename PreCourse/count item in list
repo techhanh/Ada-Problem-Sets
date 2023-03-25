@@ -39,3 +39,15 @@ def count_item_in_list(item, list_of_items):
 			num_of_times_item_appears_in_list += 1
 
 	return num_of_times_item_appears_in_list
+	
+	
+# pseudocode for scenario 3:
+# define the function with the 2 parameters (the item and the list of items)
+# create a variable to show the number of times an item appears in the list and set this count as 0
+# create another variable to show the item not in the list and set this to 0 (this is not a count since it will always return as 0 as per the instruction)
+# create a while loop with the number of times an item appears in the list variable and assign it to be less than the length of the list of items (this is set as true and will run until it is no longer true)
+# (under the while loop) use an if statement to check if the number of times an item appears in the list variable that is inside of the list of items matches the item
+# (under the if statement) increment the item not in the list variable to itself and increase by 1
+# (if it does matches) increment the number of times an item appears in the list variable to itself and increase by 1
+# (outside of the while loop) return the item not in the list variable
+# call the function with the arguments
