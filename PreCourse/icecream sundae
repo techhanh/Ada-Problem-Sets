@@ -1,2 +1,12 @@
 # Write a function `icecream_sundae` that takes two arguments, one list of ice cream flavors and one list of toppings, and returns a new list that contains all of the possible ice cream sundae combinations that can be made by combining each flavor with each toppings. If the flavors are "vanilla" and "chocolate" and the toppings are "chocolate sauce" and "berry sauce", the output list should contain "vanilla with chocolate sauce", "vanilla with berry sauce", "chocolate with chocolate sauce", "chocolate with berry sauce". 
   -Note the addition of the word "with" in the combined version. You can assume that both of the input lists only contain strings.
+
+# pseudocode for scenario 1:
+# define the function name with its 2 parameter (flavors, toppings)
+# create an icecream combination variable and set it to be an empty list (output will add to this list at the end)
+# create a for loop with the flavor elements in the flavors parameter
+# (under the for loop) create another for loop for the topping elements in toppings parameter
+# create another variable to show the possible combination between the flavors elements and the topping elements (add a with string and spaces in between the two elements)
+# use the icecream combination variable and append it to the possible combination variable (to add each pair to the icecream combination empty list)
+# (outside both of the for loops) return the icecream combination variable
+# call the function name with all of the arguments inside each list
