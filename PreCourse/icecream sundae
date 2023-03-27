@@ -10,3 +10,14 @@
 # use the icecream combination variable and append it to the possible combination variable (to add each pair to the icecream combination empty list)
 # (outside both of the for loops) return the icecream combination variable
 # call the function name with all of the arguments inside each list
+
+# scenario 1:
+# def icecream_sundae (flavors, toppings):
+#   icecream_combination = []
+
+#   for flavors_element in flavors:
+#     for toppings_element in toppings:
+#       possible_combination = flavors_element + " with " + toppings_element
+#       icecream_combination.append(possible_combination)
+
+#   return icecream_combination
