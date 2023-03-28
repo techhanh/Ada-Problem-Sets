@@ -61,3 +61,19 @@
 # (outside of the second while loop) increment the flavor element count variable to itself and increase by 1
 # (outside both of the while loops) return the icecream combination variable
 # call the function name with all of the arguments inside each list
+
+# scenario 3:
+def icecream_sundae(flavors, toppings):
+  icecream_combination = []
+  flavor_element_count = 0
+  topping_element_count = 0
+
+  while flavor_element_count < len(flavors):
+    topping_element_count = 0
+    while topping_element_count < len(toppings):
+      possible_combination = flavors[flavor_element_count] + " with " + toppings[topping_element_count]
+      icecream_combination.append(possible_combination)
+      topping_element_count += 1
+    flavor_element_count += 1
+
+  return icecream_combination
