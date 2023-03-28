@@ -77,3 +77,9 @@ def icecream_sundae(flavors, toppings):
     flavor_element_count += 1
 
   return icecream_combination
+  
+print(icecream_sundae(["vanilla", "chocolate", "strawberry"], ["whipped cream", "nuts", "a cherry"]))
+# ["vanilla with whipped cream", "vanilla with nuts", "vanilla with a cherry", "chocolate with whipped cream", "chocolate with nuts", "chocolate with a cherry", "strawberry with whipped cream", "strawberry with nuts", "strawberry with a cherry"]
+print(icecream_sundae(["a", "b"], ["c", "d", "e"])) # ["a with c", "a with d", "a with e", "b with c", "b with d", "b with e"]
+print(icecream_sundae(["vanilla", "strawberry"], [])) # []
+print(icecream_sundae([], ["chocolate sauce", "caramel sauce"])) # []
