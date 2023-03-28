@@ -43,3 +43,21 @@
   #       icecream_combination.append(possible_combination)
 
   # return icecream_combination
+  
+  
+  
+
+# pseudocode for scenario 3:
+# define the function name with its 2 parameter (flavors, toppings)
+# create an icecream combination variable and set it to be an empty list (output will add to this list at the end)
+# create a flavor element count variable and set it as 0
+# create a topping element count variable and set it as 0
+# create a while loop with the flavor element count variable and assign it to be less than the length of the flavors parameter
+# (under the while loop) use the topping element count variable and assign it as 0 (so the loop can go through all of the flavor elements)
+# create another while loop with the topping element count variable and assign it to be less than the length of the toppings parameter
+# (under the second while loop) create another variable to show the possible combination between the flavors element count inside the flavors parameter and the topping element count inside the topping parameter (add a with string and spaces in between the two elements)
+# use the icecream combination variable and append it to the possible combination variable (to add each pair to the icecream combination empty list)
+# increment the topping element count variable to itself and increase by 1
+# (outside of the second while loop) increment the flavor element count variable to itself and increase by 1
+# (outside both of the while loops) return the icecream combination variable
+# call the function name with all of the arguments inside each list
