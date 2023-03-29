@@ -300,3 +300,8 @@ snowman()
     snowman_word = r.word(
       word_min_length=SNOWMAN_MIN_WORD_LENGTH,
       word_max_length=SNOWMAN_MAX_WORD_LENGTH)
+      
+ 5. The last piece of adding our new random word is replacing the constant SNOWMAN_WORD
+ in the conditional test inside of the snowman
+ function with the new snowman_word
+ variable.
