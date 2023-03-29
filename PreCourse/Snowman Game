@@ -285,3 +285,13 @@ def draw_snowman(wrong_guess_attempt):
 
 snowman()
 
+
+# PART 4:
+1. Before we can use it in our code, we will need to install the package using the command line. To install, copypasta this into your terminal:
+2. Once that's done, add the line `from wonderwords import RandomWord` to the top of our file.
+    
+    -This will import the class `RandomWord` for us to use in our code.
+    
+3. Next, add the constants `SNOWMAN_MAX_WORD_LENGTH = 8` and `SNOWMAN_MIN_WORD_LENGTH = 5` with the other constants at the top of the file.
+4. Then, add the following lines of code to the top of the `snowman`
+ function:
