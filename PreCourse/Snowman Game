@@ -306,7 +306,7 @@ snowman()
  function with the new snowman_word
  variable.
  
-
+# Part 4 codes only:
 import random
 from wonderwords import RandomWord
 
