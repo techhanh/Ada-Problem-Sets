@@ -305,3 +305,32 @@ snowman()
  in the conditional test inside of the snowman
  function with the new snowman_word
  variable.
+ 
+
+import random
+from wonderwords import RandomWord
+
+SNOWMAN_MIN_WORD_LENGTH = 5
+SNOWMAN_MAX_WORD_LENGTH = 8
+
+def snowman():
+  r = RandomWord()
+  snowman_word = r.word(
+    word_min_length=SNOWMAN_MIN_WORD_LENGTH, 
+    word_max_length=SNOWMAN_MAX_WORD_LENGTH)
+
+  correct_guess = 0
+  wrong_guess = 0
+
+  while wrong_guess < WRONG_GUESS_ALLOWED:
+    user_input_letter = get_letter_from_user()
+
+    if user_input_letter in snowman_word:
+      print("You guessed a correct letter that's in the word. Keep going!\n")
+      correct_guess += 1
+    else:
+      print(f"The letter {user_input_letter} is not in the word. Try a different letter!\n")
+      wrong_guess += 1
+    draw_snowman(wrong_guess)
+      
+  print(f"Game Over!\nYou made {correct_guess} correct guess and {wrong_guess} wrong guess attempts.")
