@@ -402,3 +402,23 @@ def get_letter_from_user():
 # (under the else statement) use the wrong letter guess variable and append it to the user input letter variable (this will add all the wrong letter user has inputted to the empty list)
 # (outside of the while loop) call the draw snowman function to get the length of the wrong letter guess (this will how many wrong letters the user has inputted)
 # print a statement telling the user what the final correct guess and wrong guess counts are (this step is outside of the while loop)     
+
+def snowman():
+  r = RandomWord()
+  snowman_word = r.word(
+    word_min_length=SNOWMAN_MIN_WORD_LENGTH, 
+    word_max_length=SNOWMAN_MAX_WORD_LENGTH)
+
+  wrong_letter_guess = []
+
+  while len(wrong_letter_guess) < WRONG_GUESS_ALLOWED:
+    user_input_letter = get_letter_from_user()
+
+    if user_input_letter in snowman_word:
+      print("You guessed a correct letter that's in the word. Keep going!\n")
+    else:
+      print(f"The letter {user_input_letter} is not in the word. Try a different letter!\n")
+      wrong_letter_guess.append(user_input_letter)
+      
+  draw_snowm(len(wrong_letter_guess))
+  print(wrong_letter_guess)
