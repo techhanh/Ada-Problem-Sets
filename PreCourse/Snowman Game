@@ -286,8 +286,8 @@ def draw_snowman(wrong_guess_attempt):
 snowman()
 
 
-# PART 4:
-1. Before we can use it in our code, we will need to install the package using the command line. To install, copypasta this into your terminal:
+# PART 4A:
+1. Before we can use it in our code, we will need to install the package using the command line. To install, copy pasta this into your terminal:
 2. Once that's done, add the line `from wonderwords import RandomWord` to the top of our file.
     
     -This will import the class `RandomWord` for us to use in our code.
@@ -334,3 +334,11 @@ def snowman():
     draw_snowman(wrong_guess)
       
   print(f"Game Over!\nYou made {correct_guess} correct guess and {wrong_guess} wrong guess attempts.")
+  
+  
+ Part 4B: Tracking User Input
+- To track incorrect guesses, use a list to find a way to store as many or as little wrong guesses as it needs to, and will allow the codes to be more flexible and easier to modify.
+    1. Start by addding an incorrect guesses list variable to the top of the `snowman` function:.
+    2. Next we need to add each incorrect guess to the list. We are going to do this with the list function `append`which adds elements to the end of the list.
+    3. In the previous version, we were incrementing a variable `wrong_guesses`
+     each time the user guessed a letter that was not in the word, and then using that variable in the test for our while loop. We can continue to use this variable, but we can use our list instead and simplify our code. The number of elements in `wrong_letter_guess` is the number of incorrect guesses, so we can use the length of the list instead of the counter variable. We get the length of the list by using the len() function. We can also use the length of the list when we call the print_snowman function.
