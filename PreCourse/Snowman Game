@@ -342,3 +342,20 @@ def snowman():
     2. Next we need to add each incorrect guess to the list. We are going to do this with the list function `append`which adds elements to the end of the list.
     3. In the previous version, we were incrementing a variable `wrong_guesses`
      each time the user guessed a letter that was not in the word, and then using that variable in the test for our while loop. We can continue to use this variable, but we can use our list instead and simplify our code. The number of elements in `wrong_letter_guess` is the number of incorrect guesses, so we can use the length of the list instead of the counter variable. We get the length of the list by using the len() function. We can also use the length of the list when we call the print_snowman function.
+
+
+Updated codes:
+# pseudocode:
+# import random from wonderwords and import RandWord
+# create a snowman minimum word length constant and assign as 5
+# create a snowman maximum word length constant and assign as 8
+# create another constant to allow the number of wrong guesses allowed for this string
+# create your drawing and and assign it to each new variable
+# define a function name to get a letter from the user
+# create a new variable to check the letter inputted in and set it as True (this will use to check later if the character inputted in fulfil the condition set up or not)
+# set up a while loop to check the leter inputted in (the while loop will remain true until the attempt valid input variable is False)
+# within the while loop action block, create another variable to get the user input letter and assign the input function to it. Include the instructions telling the user what to
+# create an if statement (inside the while loop) to check if the user input letter is an alpha and the length of the user input letter is equal to 1
+# (if this true), set the check letter inputted variable to False (so the while loop will exit if the if statement fulfills both the condition)
+# return the user input letter so the function can output it
+# (if one of the 2 condition is false) create an else statement to print a statement telling the user how to fulfill both of the conditions 
