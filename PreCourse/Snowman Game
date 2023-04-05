@@ -359,3 +359,31 @@ Updated codes:
 # (if this true), set the check letter inputted variable to False (so the while loop will exit if the if statement fulfills both the condition)
 # return the user input letter so the function can output it
 # (if one of the 2 condition is false) create an else statement to print a statement telling the user how to fulfill both of the conditions 
+
+import random
+from wonderwords import RandomWord
+
+SNOWMAN_MIN_WORD_LENGTH = 5
+SNOWMAN_MAX_WORD_LENGTH = 8
+WRONG_GUESS_ALLOWED = 7
+
+SNOWMAN_1 = '*   *   *  '
+SNOWMAN_2 = ' *   _ *   '
+SNOWMAN_3 = '   _[_]_ * '
+SNOWMAN_4 = '  * (")    '
+SNOWMAN_5 = '  \( : )/ *'
+SNOWMAN_6 = '* (_ : _)  '
+SNOWMAN_7 = '-----------'
+
+
+def get_letter_from_user():
+  check_letter_inputted = True
+
+  while check_letter_inputted:
+    user_input_letter = input("Please enter one letter: ")
+
+    if user_input_letter.isalpha() and len(user_input_letter) == 1:
+      check_letter_inputted = False
+      return user_input_letter
+    else:
+      print("Invalid input, please enter a single alphabetical character only.")
