@@ -387,3 +387,18 @@ def get_letter_from_user():
       return user_input_letter
     else:
       print("Invalid input, please enter a single alphabetical character only.")
+      
+      
+# pseudocode:
+# define a snowman function
+# create a r (short for random) variable and assign the RandomWord function to it
+# create a snowman word variable and assign the r.word module to start with the word min length variable as the snowman min word length constant, and stop with the word max length variable as the snowman max word length constant
+# create a wrong letter guess variable and assign an empty list to it (this will be use to store the wrong letters the user has inputted)
+# set up a while loop with the length of the wrong letter guess variable and assign it as less than the wrong guess allowed constant
+# (under the while loop), use the user input letter variable (that was created in part 1), and assign the previous function name to it
+# create an if statement with the user input letter to check if it is in the snowman word variable
+# (if it is) create a print statement to show the letter was guess correctly
+# (if it is not) create an else statement and print the statement to show that the user input leter is not in the word
+# (under the else statement) use the wrong letter guess variable and append it to the user input letter variable (this will add all the wrong letter user has inputted to the empty list)
+# (outside of the while loop) call the draw snowman function to get the length of the wrong letter guess (this will how many wrong letters the user has inputted)
+# print a statement telling the user what the final correct guess and wrong guess counts are (this step is outside of the while loop)     
