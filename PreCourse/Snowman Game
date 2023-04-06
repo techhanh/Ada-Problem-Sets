@@ -489,3 +489,18 @@ Part 4C: Using `wrong_letter guess` in `get_letter_from_user`
     2. Next, We will need to update our function definition of `get_letter_from_user` with a new parameter.
     3. Last, we need to use the new information inside of `get_letter_from_user`.
         - Python lists provide us with a handy `in` operator (syntax `item in list`) that returns `True` if the item is in the list and `False` if it is not.
+
+import random
+from wonderwords import RandomWord
+
+SNOWMAN_MIN_WORD_LENGTH = 5
+SNOWMAN_MAX_WORD_LENGTH = 8
+WRONG_GUESS_ALLOWED = 7
+
+SNOWMAN_1 = '*   *   *  '
+SNOWMAN_2 = ' *   _ *   '
+SNOWMAN_3 = '   _[_]_ * '
+SNOWMAN_4 = '  * (")    '
+SNOWMAN_5 = '  \( : )/ *'
+SNOWMAN_6 = '* (_ : _)  '
+SNOWMAN_7 = '-----------'
