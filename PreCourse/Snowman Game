@@ -461,3 +461,12 @@ def draw_snowman(wrong_guess_attempt):
 
 
 snowman()
+
+
+Part 4C: Using `wrong_letter guess` in `get_letter_from_user`
+
+- Now that we have a list incorrect guesses, we can use them in the helper function `get_letter_from_user` to prevent our user from inputting the same incorrect letter multiple times.
+    1. The first step is to pass the variable `wrong_letter guess` to `get_letter_from_user` as an argument.
+    2. Next, We will need to update our function definition of `get_letter_from_user` with a new parameter.
+    3. Last, we need to use the new information inside of `get_letter_from_user`.
+        - Python lists provide us with a handy `in` operator (syntax `item in list`) that returns `True` if the item is in the list and `False` if it is not.
