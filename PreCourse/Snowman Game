@@ -592,3 +592,10 @@ def draw_snowman(wrong_guess_attempt):
 
 
 snowman()
+
+
+Part 4D: Tracking Correct Letters
+
+- At this point we are keeping track of the incorrect letters guessed and using those to provide feedback to our user when they guess a new letter. Now it is time to do the same thing but with correct letters!
+    1. Add a `correct_guesses_list` to the `snowman` function
+    2. Add correct guesses to the list
