@@ -599,3 +599,21 @@ Part 4D: Tracking Correct Letters
 - At this point we are keeping track of the incorrect letters guessed and using those to provide feedback to our user when they guess a new letter. Now it is time to do the same thing but with correct letters!
     1. Add a `correct_guesses_list` to the `snowman` function
     2. Add correct guesses to the list
+    
+ UPDATED CODES:
+# pseudocode
+# import random from wonderwords and import RandWord
+# create a snowman minimum word length constant and assign as 5
+# create a snowman maximum word length constant and assign as 8
+# create another constant to allow the number of wrong guesses allowed for this string
+# create your drawing and and assign it to each new variable
+# define a function name to get a letter from the user with the wrong letter guess as a parameter
+# create a new variable to check the letter inputted in and set it as True (this will use to check later if the character inputted in fulfil the condition set up or not)
+# set up a while loop with the check the letter inputted variable (the while loop will remain true until the attempt valid input variable is False)
+# (under the while loop) create another variable to get the user input letter and assign the input function to it. Include the instructions telling the user what to
+# create an if statement to check if the user input letter variable is in the wrong letter guess parameter
+# print a statement telling the user that this letter has already been guess and to try a different letter
+# (if it is not) create an elif statement to check if the user input letter is an alpha (character) and the length of the user input letter is exactly 1
+# set the check letter inputted variable to False (so the while loop will exit if the if statement fulfills both of the condition stated above)
+# (if one of the 2 condition is false) create an else statement to print a statement telling the user to input in a single character only
+# (outside of the while loop) return the user input letter so the function can output it
