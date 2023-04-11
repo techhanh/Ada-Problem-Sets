@@ -430,6 +430,31 @@ UPDATED CODES:
 # (if one of the 2 condition is false) create an else statement to print a statement telling the user to input in a single character only
 # (outside of the while loop) return the user input letter so the function can output it
   
+def snowman():
+  r = RandomWord()
+  snowman_word = r.word(
+    word_min_length=SNOWMAN_MIN_WORD_LENGTH, 
+    word_max_length=SNOWMAN_MAX_WORD_LENGTH)
+
+  correct_letter_guess = []
+  wrong_letter_guess = []
+
+  while len(wrong_letter_guess) < WRONG_GUESS_ALLOWED:
+    user_input_letter = get_letter_from_user(wrong_letter_guess)
+
+    if user_input_letter in snowman_word:
+      print("You've guessed a correct letter that's in the secret word. Keep going!\n")
+      correct_letter_guess.append(user_input_letter)
+    else:
+      print(f"The letter {user_input_letter} is not in the secret word. Try a different letter!\n")
+      wrong_letter_guess.append(user_input_letter)
+      
+  draw_snowman(len(wrong_letter_guess))
+
+  print(f"You've guessed the wrong letters: {wrong_letter_guess}")
+  print(f"The letters you've guessed correctly: {correct_letter_guess}")
+  print(f"The secret word is: {snowman_word}")
+
   
 # pseucodes 
 # define a draw snowman function with a wrong guess attempt parameter
