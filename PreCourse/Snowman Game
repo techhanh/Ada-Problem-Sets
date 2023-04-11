@@ -748,3 +748,9 @@ def draw_snowman(wrong_guess_attempt):
 
 
 snowman()
+
+
+Part 4E: Using `correct_letter_guess` in `get_letter_from_user`
+
+- Update the helper function `get_letter_from_user` so that it takes an additional argument (`correct_letter_guess`). Use this new argument along with `wrong_letter_guess`
+ to print "You have already guessed that letter" as feedback to the user if the user has already guessed the letter.
