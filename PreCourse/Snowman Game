@@ -773,3 +773,18 @@ UPDATED CODES:
 # set the check letter inputted variable to False (so the while loop will exit if the if statement fulfills both of the condition stated above)
 # (if one of the 2 condition is false) create an else statement to print a statement telling the user to input in a single character only
 # (outside of the while loop) return the user input letter so the function can output it
+
+import random
+from wonderwords import RandomWord
+
+SNOWMAN_MIN_WORD_LENGTH = 5
+SNOWMAN_MAX_WORD_LENGTH = 8
+WRONG_GUESS_ALLOWED = 7
+
+SNOWMAN_1 = '*   *   *  '
+SNOWMAN_2 = ' *   _ *   '
+SNOWMAN_3 = '   _[_]_ * '
+SNOWMAN_4 = '  * (")    '
+SNOWMAN_5 = '  \( : )/ *'
+SNOWMAN_6 = '* (_ : _)  '
+SNOWMAN_7 = '-----------'
