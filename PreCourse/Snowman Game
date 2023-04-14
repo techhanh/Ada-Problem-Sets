@@ -802,3 +802,18 @@ SNOWMAN_4 = '  * (")    '
 SNOWMAN_5 = '  \( : )/ *'
 SNOWMAN_6 = '* (_ : _)  '
 SNOWMAN_7 = '-----------'
+
+def get_letter_from_user(correct_letter_guess, wrong_letter_guess):
+  check_letter_inputted = True
+
+  while check_letter_inputted:
+    user_input_letter = input("Please enter one letter: ")
+
+    if user_input_letter in wrong_letter_guess or user_input_letter in correct_letter_guess:
+      print("You have already guess this letter, please try a different letter.\n")
+    elif user_input_letter.isalpha() and len(user_input_letter) == 1:
+      check_letter_inputted = False
+    else:
+      print("Invalid input, please enter a single alphabetical character only.\n")
+
+  return user_input_letter
