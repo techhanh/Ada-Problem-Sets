@@ -893,3 +893,24 @@ def snowman():
 # create an elif statement and set the iterated value to equal to 2 and create a print statement with the sixth part of the snowman variable
 # create an elif statement and set the iterated value to equal to 2 and create a print statement with the seventh part of the snowman variable
 # (if haven't done yet), call the draw snowman function with the wrong guess argument at the end of the else statement
+
+def draw_snowman(wrong_guess_attempt):
+
+  for i in range(WRONG_GUESS_ALLOWED + 1 - wrong_guess_attempt, WRONG_GUESS_ALLOWED + 1):
+    if i == 1:
+      print(SNOWMAN_1)
+    elif i == 2:
+      print(SNOWMAN_2)
+    elif i == 3:
+      print(SNOWMAN_3)    
+    elif i == 4:
+      print(SNOWMAN_4)   
+    elif i == 5:
+      print(SNOWMAN_5)
+    elif i == 6:
+      print(SNOWMAN_6)
+    elif i == 7:
+      print(SNOWMAN_7)
+
+
+snowman()
