@@ -918,3 +918,14 @@ snowman()
 
 Part 4F: Using Lists to Improve Readability and Simplify Code
 Store the 7 snowman drawing in a list instead of making it all individual constants.
+
+The first step is to store all of the drawing constants in a list:
+SNOWMAN_GRAPHIC = [
+    '*   *   *  ',
+    ' *   _ *   ',
+    '   _[_]_ * ',
+    '  * (")    ',
+    '  \( : )/ *',
+    '* (_ : _)  ',
+    '-----------'
+]
