@@ -935,3 +935,21 @@ def print_snowman(wrong_guesses_count):
     for i in range(SNOWMAN_WRONG_GUESSES - wrong_guesses_count,
                 SNOWMAN_WRONG_GUESSES)
         print(SNOWMAN_GRAPHIC[i])
+        
+        
+# pseudocode:
+# import random from wonderwords and import RandWord
+# create a snowman minimum word length constant and assign as 5
+# create a snowman maximum word length constant and assign as 8
+# create another constant to allow the number of wrong guesses allowed for this string
+# create another constant to store the snowman graphics into a list (each line of the drawing is separated by a comma)
+# define a function name to get a letter from the user with the 2 parameters (correct letter guess and wrong letter guess)
+# create a new variable to check the letter inputted in and set it as True (this will use to check later if the character inputted in fulfil the condition set up or not)
+# set up a while loop with the check the letter inputted variable (the while loop will remain true until the attempt valid input variable is False)
+# (under the while loop) create another variable to get the user input letter and assign the input function to it. Include the instructions telling the user what to
+# create an if statement to check if the user input letter variable is in the correct letter guess parameter or if the user input letter variable is in the wrong letter guess parameter
+# print a statement telling the user that this letter has already been guess and to try a different letter
+# (if it is not) create an elif statement to check if the user input letter is an alpha (character) and the length of the user input letter is exactly 1
+# set the check letter inputted variable to False (so the while loop will exit if the if statement fulfills both of the condition stated above)
+# (if one of the 2 condition is false) create an else statement to print a statement telling the user to input in a single character only
+# (outside of the while loop) return the user input letter so the function can output it
