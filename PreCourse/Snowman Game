@@ -917,3 +917,4 @@ snowman()
 
 
 Part 4F: Using Lists to Improve Readability and Simplify Code
+Store the 7 snowman drawing in a list instead of making it all individual constants.
