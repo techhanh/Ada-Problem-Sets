@@ -929,3 +929,9 @@ SNOWMAN_GRAPHIC = [
     '* (_ : _)  ',
     '-----------'
 ]
+
+The next step is to update the draw snowman function to use the list.
+def print_snowman(wrong_guesses_count):
+    for i in range(SNOWMAN_WRONG_GUESSES - wrong_guesses_count,
+                SNOWMAN_WRONG_GUESSES)
+        print(SNOWMAN_GRAPHIC[i])
