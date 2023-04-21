@@ -1005,3 +1005,29 @@ def get_letter_from_user(correct_letter_guess, wrong_letter_guess):
 # print a statement telling the user what their wrong guess letters are and provide ther wrong letter guess list
 # print a statement telling the user what their correct guess letters are and provide ther correct letter guess list
 # print a statement telling the user what the secret word is
+
+
+def snowman():
+  r = RandomWord()
+  snowman_word = r.word(
+    word_min_length=SNOWMAN_MIN_WORD_LENGTH, 
+    word_max_length=SNOWMAN_MAX_WORD_LENGTH)
+
+  correct_letter_guess = []
+  wrong_letter_guess = []
+
+  while len(wrong_letter_guess) < WRONG_GUESS_ALLOWED:
+    user_input_letter = get_letter_from_user(correct_letter_guess, wrong_letter_guess)
+
+    if user_input_letter in snowman_word:
+      print("You guessed a correct letter that's in the secret word. Keep going!\n")
+      correct_letter_guess.append(user_input_letter)
+    else:
+      print(f"The letter {user_input_letter} is not in the secret word, try a different letter.\n")
+      wrong_letter_guess.append(user_input_letter)
+      
+  draw_snowman(len(wrong_letter_guess))
+
+  print(f"You've guessed the wrong letter(s): {wrong_letter_guess}")
+  print(f"The letter(s) you've guessed correctly: {correct_letter_guess}")
+  print(f"The secret word is: {snowman_word}")
