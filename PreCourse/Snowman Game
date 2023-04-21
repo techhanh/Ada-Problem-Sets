@@ -1031,3 +1031,13 @@ def snowman():
   print(f"You've guessed the wrong letter(s): {wrong_letter_guess}")
   print(f"The letter(s) you've guessed correctly: {correct_letter_guess}")
   print(f"The secret word is: {snowman_word}")
+  
+  
+# pseucode:
+# define a draw snowman function with a wrong guess attempt parameter
+# create a for loop with the iterated value is in range (the for loop is use in part 3 because there is a known amount of repetition involve, which is the number of wrong guess allowed)
+# set the start of the range to be the wrong guess allowed constant minus the wrong guess attempt variable (this is so the previous drawing is not repeating itself and only continuing on from where the drawing last left off at)
+# set the end of the range to be the wrong guess allowed constant
+# (under the for loop) create a print statement with the iterated value inside of the snowman graphics constant
+# (if haven't done yet), call the draw snowman function with the wrong guess argument at the end of the else statement in Part 2
+# at the end of your code, call the snowman function to run all 3 functions together
