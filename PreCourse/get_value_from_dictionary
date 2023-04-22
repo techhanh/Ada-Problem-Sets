@@ -16,3 +16,7 @@ def get_value_from_dictionary(dict, key):
     return dict[key]
   else:
     return None
+
+print(get_value_from_dictionary({"dog":"cat", "tree":"bush", "star":"planet"}, "tree")) # "bush"
+print(get_value_from_dictionary({"dog":"cat", "tree":"bush", "star":"planet"}, "chocolate")) # None
+print(get_value_from_dictionary({"dog":"cat", "tree":"bush", "star":"planet"}, "cat")) # None
