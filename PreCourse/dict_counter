@@ -10,3 +10,11 @@ Write a function `dict_counter` that takes two arguments, a dictionary and a k
 # (if it is) return the key inside the dict
 # else return None
 # call the function name with the arguments
+
+
+def get_value_from_dictionary(dict, key):
+
+  if key in dict:
+    return dict[key]
+  else:
+    return None
