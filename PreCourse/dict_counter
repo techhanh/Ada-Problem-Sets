@@ -1,0 +1,4 @@
+1. Write a function `dict_counter` that takes two arguments, a dictionary and a key that may or may not be in the dictionary. The function has the following behavior:
+    - If the key is in the dictionary, increment the value associated with that key by 1.
+    - If the key is not in the dictionary, set the value for that key to 1
+    - .Return the updated dictionary.
