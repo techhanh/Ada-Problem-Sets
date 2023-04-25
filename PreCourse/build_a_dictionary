@@ -26,3 +26,9 @@ def build_a_dictionary(key_list, value_list):
     return None
 
   return dict
+
+
+print(build_a_dictionary(["dog", "cat", "bird", "mouse"], [1, 2, 3, 4])) # {"dog":1, "cat":2, "bird":3, "mouse":4}
+print(build_a_dictionary([1, 2, 3, 4], ["dog", "cat", "bird", "mouse"])) # {1: "dog", 2: "cat", 3: "bird", 4: "mouse"}
+print(build_a_dictionary([1, 2,], ["dog", "cat", "bird", "mouse"])) # None
+print(build_a_dictionary(["dog", "cat", "bird", "mouse"], [])) # None
