@@ -3,3 +3,14 @@ Write a function `build_a_dictionary` that takes two arguments, a list of keys
     - Create a new dictionary that contains all of the keys and values
     - The keys and values must be matched in order, ie, the key at index 0 in the key list goes with the value at index 0 in the value list
     - Return the new dictionary or None if the inputs are not valid
+
+
+# pseudocode:
+# create a dict name with the 2 parameters (a key list and a value list)
+# create a dict variable and set it to be an empty dict (the final ouput will be shown in here)
+# create an if statement to check if the length of the key list parameter matches that of the length of the value list parameter
+# (if it does, under the if statement) create a for loop with the iterated value (elements of that list) in the range of the length of the key list parameter
+# (under the for loop) use the iterated value inside the keylist paramter that is inside the dict variable and assign it to be the iterated value inside the value list parameter
+# (if it does not, outside of the for loop) create an else statement and return None
+# return the dict variable to show the final output in a dict format
+# call the function name with the arguments
