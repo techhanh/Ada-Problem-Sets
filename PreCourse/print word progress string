@@ -39,3 +39,8 @@ def print_word_progress_string(word, dict_letter_as_key_with_boolean_value):
       num_of_letters_in_word_count += 1
 
     return output_string
+
+
+print(print_word_progress_string("pepper", {"p":True, "e": False, "r": False})) # p _ p p _ _    # False
+print(print_word_progress_string("tiger", {"e":False, "g": False, "i": False, "r": False, "t": False})) # _ _ _ _ _    # False
+print(print_word_progress_string("swap", {"a":True, "m": True, "p": True, "s": True, "w": True})) # s w a p    # True
