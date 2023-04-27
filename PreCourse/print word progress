@@ -7,3 +7,17 @@ This function will need to:
     - If the (argumented value of "guessed" is `True` add the letter to the string
     - If the (argument) value of "guessed" is `False` add '_' to the string
     -Add 1 space between each letter/underscore
+
+# pseudocode:
+# define a print word progress string function with 2 parameters (the word and a dict letter as key with boolean value)
+# create an output string and set it as an empty string (if the letter is in the word, it will print to the output string, if not, it will print an underscore to the empty string)
+# create a number of letters in word count variable and start the count at 0 (checks to see how many letters are there in the word)
+# create a for loop to check each iterated value (letter) in the word
+# then create an if statement to check if the number of letters in word count is greater than 0
+# (if it is) the output string variable will be incremented by itself and with an empty string with a space in it (this is to separate the guess/unguess letters from each other with a space in between it to better visualize it)
+# create another if statement to check if the letter is part of the dict letter as key with boolean value variable (the dict's value is argumented as True, which means the letter has been guessed)
+# (under the second if statement) the output string variable will be incremented by itself with the letter (this is to output the letter that has been guessed correctly in the output string variable)
+# (if the dict's value is argumented as False, this means the letter has not been guessed yet) create an else statement and use the output string variable to incremented itself with the underscore string
+# (outside of the second if statement) use the number of letters in word count variable and increment it to itself and increase by 1 (this moves on to check the next letter in the word)
+# (outside of the for loop) return the output string so that it can output what has been guessed already and what has not been guess yet (shown as an underscore)
+# call the function with the arguments
