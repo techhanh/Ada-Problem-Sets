@@ -21,3 +21,21 @@ This function will need to:
 # (outside of the second if statement) use the number of letters in word count variable and increment it to itself and increase by 1 (this moves on to check the next letter in the word)
 # (outside of the for loop) return the output string so that it can output what has been guessed already and what has not been guess yet (shown as an underscore)
 # call the function with the arguments
+
+
+def print_word_progress_string(word, dict_letter_as_key_with_boolean_value):
+    output_string = ""
+    num_of_letters_in_word_count = 0
+
+    for letter in word:
+      if num_of_letters_in_word_count > 0:
+        output_string += " "
+
+      if dict_letter_as_key_with_boolean_value[letter]:
+        output_string += letter
+      else:
+        output_string += "_"
+
+      num_of_letters_in_word_count += 1
+
+    return output_string
