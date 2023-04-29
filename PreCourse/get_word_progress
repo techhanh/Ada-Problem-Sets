@@ -1,2 +1,7 @@
 - Write a helper function `get_word_progress(word, word_dict)`
  that takes two parameters, a word and a dictionary where each letter in the word is a key and the values are `True` or `False`. The function returns `True`if every value in the dictionary is `True`. The function returns `False` if any of the values in the dictionary are `False`.
+
+- This function will need to:
+    -Loop over each letter (key) in the `word_dict`
+    - If `word_dict[letter]` is `False`, return `False`
+    -If the loop terminates without encountering a `False` value, return `True`
