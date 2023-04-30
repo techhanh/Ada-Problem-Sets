@@ -20,3 +20,8 @@ def get_word_progress(word, dict_letter_as_key_with_boolean_value):
         return False
 
     return True
+
+
+print(get_word_progress("pepper", {"p":True, "e": False, "r": False})) # False
+print(get_word_progress("tiger", {"e":False, "g": False, "i": False, "r": False, "t": False})) # False
+print(get_word_progress("swap", {"a":True, "m": True, "p": True, "s": True, "w": True})) # True
