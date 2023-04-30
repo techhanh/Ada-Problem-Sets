@@ -13,3 +13,10 @@
 # then return False (if any of the value in the dictionary is argumented as False)
 # (outside of the for loop) return True (if every value in the dictionary is argumented as True)
 
+def get_word_progress(word, dict_letter_as_key_with_boolean_value):
+
+    for letter in word:
+      if not dict_letter_as_key_with_boolean_value[letter]:
+        return False
+
+    return True
