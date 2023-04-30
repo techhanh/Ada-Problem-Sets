@@ -5,3 +5,11 @@
     -Loop over each letter (key) in the `word_dict`
     - If `word_dict[letter]` is `False`, return `False`
     -If the loop terminates without encountering a `False` value, return `True`
+
+# pseudocode:
+# define a get word progress function with 2 parameters (the word and the dict letter as key with the boolean value)
+# create a for loop to check each iterated value (letter) in the word
+# (under the for loop) create an if statement to check if (any of) the letter is not part of the dict letter as key with boolean value variable
+# then return False (if any of the value in the dictionary is argumented as False)
+# (outside of the for loop) return True (if every value in the dictionary is argumented as True)
+
