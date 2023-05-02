@@ -1050,3 +1050,8 @@ def draw_snowman(wrong_guess_attempt):
 
 
 snowman()
+
+
+Part 5: Building a Word Dictionary
+
+Our end goal is to display each letter of the word with an underscore, or '_' character, if the letter has not yet been guessed and the show correct letter if it has been guessed.
