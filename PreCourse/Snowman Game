@@ -1052,6 +1052,10 @@ def draw_snowman(wrong_guess_attempt):
 snowman()
 
 
-Part 5: Building a Word Dictionary
+# Part 5: Building a Word Dictionary
 
-Our end goal is to display each letter of the word with an underscore, or '_' character, if the letter has not yet been guessed and the show correct letter if it has been guessed.
+-Our end goal is to display each letter of the word with an underscore, or '_' character, if the letter has not yet been guessed and the show correct letter if it has been guessed.
+-The first thing we need to do is convert the secret word snowman_word
+ into a dictionary. Write a helper function build_word_dict
+ that takes a string and returns a dictionary, where each unique letter from the word is a key and all of the values are False
+-replace the correct_letter_guess with the snowman_dict
