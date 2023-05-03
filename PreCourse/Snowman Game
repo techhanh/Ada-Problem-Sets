@@ -1077,3 +1077,18 @@ snowman()
 # then print a statement telling the user that this letter has already been guess and to try a different letter
 # create an else statement for the check letter inputted variable and assign it as False (so the while loop will exit if both of the condition stated above are true)
 # (outside of the while loop) return the user input letter so the function can output it
+
+import random
+from wonderwords import RandomWord
+
+SNOWMAN_GRAPHICS = [
+  '*   *   *  ',
+  ' *   _ *   ',
+  '   _[_]_ * ',
+  '  * (")    ',
+  '  \( : )/ *',
+  '* (_ : _)  ',
+  '-----------'
+]
+
+
