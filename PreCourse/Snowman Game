@@ -1059,3 +1059,21 @@ snowman()
  into a dictionary. Write a helper function build_word_dict
  that takes a string and returns a dictionary, where each unique letter from the word is a key and all of the values are False
 -replace the correct_letter_guess with the snowman_dict
+
+# pseudocode:
+# import random
+# from wonderwords import RandWord
+# create a constant to store the snowman graphics into a list (each element of the list is a line drawing and each element is separated by a comma)
+# create another constant for the number of wrong guesses allowed and set this as the length of the snowman graphic constant
+# create a snowman minimum word length constant and assign as 5
+# create a snowman maximum word length constant and assign as 8
+# define a function name to get a letter from the user with the 2 parameters (correct letter guess and wrong letter guess)
+# create a new variable to check the letter inputted in and set it as True (this will use to check later if the character inputted in fulfil the condition set up or not)
+# set up a while loop with the check the letter inputted variable (the while loop will remain true until the variable is assign as False)
+# (under the while loop) create another variable to get the user input letter and assign the input function to it. Print the statement telling the user to enter a letter
+# create an elif statement to check if the user input letter is not an alpha (character) and the length of the user input letter is not equactly 1
+# then create a print statement telling the user to input in a single character only
+# (if it is) create an elif statement to check if the user input letter variable is in the correct letter guess parameter or if the user input letter variable is in the wrong letter guess parameter
+# then print a statement telling the user that this letter has already been guess and to try a different letter
+# create an else statement for the check letter inputted variable and assign it as False (so the while loop will exit if both of the condition stated above are true)
+# (outside of the while loop) return the user input letter so the function can output it
