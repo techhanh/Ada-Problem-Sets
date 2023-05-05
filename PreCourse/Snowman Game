@@ -1110,3 +1110,12 @@ def get_letter_from_user(correct_letter_guess, wrong_letter_guess):
       check_letter_inputted = False
     
   return user_input_letter
+  
+  
+# pseudocode for the helper function:
+# define a function name for the build word dict with the word as its parameter
+# create a word dict variable and assign it as an empty dict
+# create a for loop with the iterated value (letter) in the word parameter
+# (under the for loop) create an if statement to check if the letter is not in the word dict
+# then the letter inside of the word dict is set as False
+# (outside of the if statement) return the word dict for it to output
