@@ -1148,3 +1148,25 @@ def build_word_dict(word):
 # call the draw snowman function with the length of the wrong letter guess as an argument
 # print a statement telling the user what their correct guess letters are and provide ther correct letter guess in a dict
 # print a statement telling the user what the secret word is
+
+
+def snowman():
+  r = RandomWord()
+  snowman_word = r.word(
+    word_min_length=SNOWMAN_MIN_WORD_LENGTH, 
+    word_max_length=SNOWMAN_MAX_WORD_LENGTH)
+
+  snowman_dict = build_word_dict(snowman_word)
+  wrong_letter_guess = []
+
+  while len(wrong_letter_guess) < WRONG_GUESS_ALLOWED:
+    user_input_letter = get_letter_from_user(snowman_dict, wrong_letter_guess)
+
+    if user_input_letter in snowman_dict:
+      print("You guessed a correct letter that's in the secret word. Keep going!\n")
+      snowman_dict[user_input_letter] = True
+    else:
+      print(f"The letter {user_input_letter} is not in the secret word, try a different letter.\n")
+      wrong_letter_guess.append(user_input_letter)
+      
+    print(f"You've guessed the wrong letter(s): {wrong_letter_guess}\n")
