@@ -1195,3 +1195,6 @@ def draw_snowman(wrong_guess_attempt):
 
 
 snowman()
+
+Part 6: Displaying User Progres
+Displaying User Progres
