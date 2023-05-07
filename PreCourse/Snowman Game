@@ -1198,3 +1198,5 @@ snowman()
 
 Part 6: Displaying User Progres
 Displaying User Progres
+
+Update your get_letter_from_user helper function and make the following changes: 1. Change the first parameter to be the word dictionary instead of a list 1. Add additional feedback to the user when they attempt to guess a letter that they have already guessed that informs them if the letter is in the word or not.
