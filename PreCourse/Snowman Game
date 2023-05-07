@@ -1222,3 +1222,13 @@ Update your get_letter_from_user helper function and make the following changes:
 
 import random
 from wonderwords import RandomWord
+
+SNOWMAN_GRAPHICS = [
+  '*   *   *  ',
+  ' *   _ *   ',
+  '   _[_]_ * ',
+  '  * (")    ',
+  '  \( : )/ *',
+  '* (_ : _)  ',
+  '-----------'
+]
