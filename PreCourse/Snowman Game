@@ -1128,3 +1128,23 @@ def build_word_dict(word):
     if not letter in word_dict:
       word_dict[letter] = False
   return word_dict
+
+
+# pseudocode:
+# define a snowman function
+# create a r variable (short for random) and assign the RandomWord function to it
+# create a snowman word variable and assign the r.word module to start with the word min length variable as the snowman min word length constant, and stop with the word max length variable as the snowman max word length constant
+# create a snowman dict variable and assign the previous build word dict function to it with the snowman word as its parameter (this will create a dict for all the correct letters that the user has inputted in)
+# create a wrong letter guess variable and assign it as an empty list (this will be use to store the wrong letters as a list that the user has inputted in))
+# set up a while loop with the length of the wrong letter guess variable and assign it as less than the wrong guess allowed constant
+# (under the while loop) use the user input letter variable, and assign the previous get letter from user function to it with the 2 parameters (snowman dict and wrong letter guess)
+# create an if statement with the user input letter to check if it is in the snowman dict variable
+# then create a print statement to show the letter was guess correctly
+# use the user input letter that is inside of the snowman dict variable and assign it as True (this will add to the empty dict if the was guess correctly)
+# (if it is not) create an else statement and print the statement to show that the user input leter is not in the word and to try again
+# then use the wrong letter guess variable and append it to the user input letter variable (this will add all the wrong letter user has inputted into the empty list)
+# (outside of the while loop) call the draw snowman function to get the length of the wrong letter guess (this will how many wrong letters the user has inputted)
+# (outside of the else statement) print a statement telling the user what their wrong guess letters are and provide ther wrong letter guess list
+# call the draw snowman function with the length of the wrong letter guess as an argument
+# print a statement telling the user what their correct guess letters are and provide ther correct letter guess in a dict
+# print a statement telling the user what the secret word is
