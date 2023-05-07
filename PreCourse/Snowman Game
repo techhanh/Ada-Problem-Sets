@@ -1170,3 +1170,8 @@ def snowman():
       wrong_letter_guess.append(user_input_letter)
       
     print(f"You've guessed the wrong letter(s): {wrong_letter_guess}\n")
+   
+   
+  draw_snowman(len(wrong_letter_guess))
+  print(f"The letter(s) you've guessed correctly: {snowman_dict}")
+  print(f"The secret word is: {snowman_word}")
