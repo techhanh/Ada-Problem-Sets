@@ -1186,3 +1186,12 @@ def snowman():
   draw_snowman(len(wrong_letter_guess))
   print(f"The letter(s) you've guessed correctly: {snowman_dict}")
   print(f"The secret word is: {snowman_word}")
+
+
+def draw_snowman(wrong_guess_attempt):
+
+  for i in range(WRONG_GUESS_ALLOWED - wrong_guess_attempt, WRONG_GUESS_ALLOWED):
+    print(SNOWMAN_GRAPHICS[i])
+
+
+snowman()
