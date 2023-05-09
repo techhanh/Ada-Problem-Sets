@@ -1261,3 +1261,12 @@ def get_letter_from_user(word_dict, wrong_letter_guess):
 # (under the for loop) create an if statement to check if the letter is not in the word dict
 # then the letter inside of the word dict is set as False
 # (outside of the if statement) return the word dict for it to output
+
+
+# HELPER FUNCTION
+def build_word_dict(word):
+  word_dict = {}
+  for letter in word:
+    if not letter in word_dict:
+      word_dict[letter] = False
+  return word_dict
