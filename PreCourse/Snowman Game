@@ -1338,3 +1338,13 @@ snowman()
 
 
 Part 7: Getting Word Guessing Progress
+
+- Snowman Game Description:
+    1. User starts the game from the command line
+    2. A secret word is selected
+    3. User is prompted to guess a letter
+    4. The game checks the letter to see if it is in the word
+    5. The game prints out a section of the snowman drawing, showing one level for each incorrectly guessed letters
+    6. The game prints out a hidden version of the word, where each correct letter is displayed and un-guessed letters are hidden as underscores
+    7. The game prints out all of the incorrect letters that have been guessed
+    8. The game loops back to asking the user to guess a letter and continues that pattern until either the user has guessed all of the letters in the word, or the snowman drawing is complete.
