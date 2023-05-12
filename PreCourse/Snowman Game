@@ -1335,3 +1335,6 @@ def draw_snowman(wrong_guess_attempt):
 
 
 snowman()
+
+
+Part 7: Getting Word Guessing Progress
