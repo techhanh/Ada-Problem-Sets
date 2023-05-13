@@ -1410,3 +1410,10 @@ def get_letter_from_user(correct_letter_guess_dict, wrong_letter_guess_list):
 # create a for loop with the iterated value (letter) in the word parameter
 # then use the iterated value (letter) that is part of the correct letter guess dict and set it as False
 # (outside of the for loop) return the correct letter guess dict for it to output
+
+# Helper Function 1
+def build_correct_letter_guess_dict(guess_word):
+  correct_letter_guess_dict = {}
+  for letter in guess_word:
+      correct_letter_guess_dict[letter] = False
+  return correct_letter_guess_dict
