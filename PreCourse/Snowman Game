@@ -1417,3 +1417,11 @@ def build_correct_letter_guess_dict(guess_word):
   for letter in guess_word:
       correct_letter_guess_dict[letter] = False
   return correct_letter_guess_dict
+
+
+# pseudocode for helper function 2:
+# define the guess word progress function with 2 parameters (the guess word and the correct letter guess dict)
+# create a for loop to check for each of iterated value (letter) in the guess word
+# then create an if statement to check if (any of) the letter is not part of the correct letter guess dict variable
+# then return False
+# (outside of the for loop) return True
