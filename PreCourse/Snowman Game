@@ -1360,3 +1360,13 @@ Part 7: Getting Word Guessing Progress
 
 import random
 from wonderwords import RandomWord
+
+SNOWMAN_GRAPHICS = [
+  '*   *   *  ',
+  ' *   _ *   ',
+  '   _[_]_ * ',
+  '  * (")    ',
+  '  \( : )/ *',
+  '* (_ : _)  ',
+  '-----------'
+]
