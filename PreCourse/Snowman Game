@@ -1357,3 +1357,6 @@ Part 7: Getting Word Guessing Progress
 # create another constant for the number of wrong guesses allowed and set this as the length of the snowman graphics constant
 # create a snowman minimum word length constant and assign as 5
 # create a snowman maximum word length constant and assign as 8
+
+import random
+from wonderwords import RandomWord
