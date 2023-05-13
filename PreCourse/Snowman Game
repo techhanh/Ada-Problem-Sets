@@ -1402,3 +1402,11 @@ def get_letter_from_user(correct_letter_guess_dict, wrong_letter_guess_list):
       check_user_input = False
     
   return user_input
+
+
+# pseudocode for helper function 1:
+# define a function name for the build correct letter guess dict with the word as its parameter
+# create a correct letter guess dict variable and assign it as an empty dict (all the correct letters the user has input will show up in here)
+# create a for loop with the iterated value (letter) in the word parameter
+# then use the iterated value (letter) that is part of the correct letter guess dict and set it as False
+# (outside of the for loop) return the correct letter guess dict for it to output
