@@ -1348,3 +1348,12 @@ Part 7: Getting Word Guessing Progress
     6. The game prints out a hidden version of the word, where each correct letter is displayed and un-guessed letters are hidden as underscores
     7. The game prints out all of the incorrect letters that have been guessed
     8. The game loops back to asking the user to guess a letter and continues that pattern until either the user has guessed all of the letters in the word, or the snowman drawing is complete.
+
+
+# pseudocode for setup and constants:
+# import random
+# from wonderwords import RandWord module
+# create a constant to store the snowman graphics into a list (each element of the list is a line drawing of the graphic and each element is separated by a comma)
+# create another constant for the number of wrong guesses allowed and set this as the length of the snowman graphics constant
+# create a snowman minimum word length constant and assign as 5
+# create a snowman maximum word length constant and assign as 8
