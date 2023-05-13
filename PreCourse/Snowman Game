@@ -1387,3 +1387,18 @@ SNOWMAN_MAX_WORD_LENGTH = 8
 # then print a statement telling the user that the letter has already been guess and to try a different letter
 # create an else statement for the check user input variable and assign it as False (so the while loop will exit if both of the condition stated above are true)
 # (outside of the while loop) return the user input letter so the function can show it
+
+def get_letter_from_user(correct_letter_guess_dict, wrong_letter_guess_list):
+  check_user_input = True
+
+  while check_user_input:
+    user_input = input("\nPlease enter one letter: ")
+
+    if not user_input.isalpha() or len(user_input) != 1:
+      print("Invalid input, please enter one alphabetical letter only.")
+    elif (user_input in correct_letter_guess_dict and correct_letter_guess_dict[user_input]) or user_input in wrong_letter_guess_list:
+      print("You have already guess this letter, please try another letter.")
+    else:
+      check_user_input = False
+    
+  return user_input
