@@ -1434,3 +1434,14 @@ def guess_word_progress(guess_word, correct_letter_guess_dict):
       return False
 
   return True
+
+
+# pseudocode for helper function 3:
+# define a show guess word progress function with 2 parameters (the guess word and the correct letter guess dict)
+# create an output progress string variable and set it as an empty string (if the letter is in the word, it will print that letter to the output progress string, if not, it will print an underscore instead to the output progress string)
+# create a for loop to check for each of iterated value (letter) in the guess word
+# then create an if statement to check if iterated value (letter) is part of the correct letter guess dict parameter
+# (if it is) the output progress string variable will be incremented by itself and with the (iterated value) letter (this is to print all the letters that user input correctly to the output progress string)
+# (if it is not) create an else statement and use the output progress string variable to incremented by itself with the underscore string (this will show all the letters that have the user have not correctly inputted in yet with an _ symbol)
+# (outside of the else statement) use the output progress string variable and increment by itself with a blank space string (this is to separate what the user has inputted in correctly vs what the user has not inputted in yet from each other with a space in between it to better visualize it)
+# (outside of the for loop) print the output progress string variable to show what the user's progress has been so far
