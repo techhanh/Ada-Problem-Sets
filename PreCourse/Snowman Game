@@ -1425,3 +1425,12 @@ def build_correct_letter_guess_dict(guess_word):
 # then create an if statement to check if (any of) the letter is not part of the correct letter guess dict variable
 # then return False
 # (outside of the for loop) return True
+
+# helper function 2 
+def guess_word_progress(guess_word, correct_letter_guess_dict):
+
+  for letter in guess_word:
+    if not correct_letter_guess_dict[letter]:
+      return False
+
+  return True
