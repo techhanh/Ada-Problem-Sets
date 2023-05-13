@@ -1374,3 +1374,16 @@ SNOWMAN_GRAPHICS = [
 WRONG_GUESS_ALLOWED = len(SNOWMAN_GRAPHICS)
 SNOWMAN_MIN_WORD_LENGTH = 5
 SNOWMAN_MAX_WORD_LENGTH = 8
+
+
+# pseudocode:
+# define a function name to get a letter from the user with the 2 parameters (word dict and wrong letter guess list)
+# create a check user input variable and set it as True (this will use to check later if the letter inputted in fulfil the conditions set up or not)
+# create a while loop with the check user input variable (the while loop will remain true until the variable is assign as False)
+# then create another variable to get the user input and assign the input function to it. Print a statement telling the user to enter a letter
+# create an if statement to check if the user input is not an alpha (letter) or the length of the user input is not exacly 1
+# then create a print statement telling the user to input in a single letter only
+# (if it is) create an elif statement to check that the user input variable in the correct letter guess dict and the user input variable is part of the correct letter guess dict variable or if the user input variable is in the wrong letter guess list parameter (this means that the letter has already been guessed before))
+# then print a statement telling the user that the letter has already been guess and to try a different letter
+# create an else statement for the check user input variable and assign it as False (so the while loop will exit if both of the condition stated above are true)
+# (outside of the while loop) return the user input letter so the function can show it
