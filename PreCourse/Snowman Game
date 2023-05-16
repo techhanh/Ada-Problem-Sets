@@ -1483,3 +1483,36 @@ def show_guess_word_progress(guess_word, correct_letter_guess_dict):
 # (outside of the while loop) use an if statement to check if all of the guess letters (are correctly inputted in)
 # (if so) print a statement telling the user that they have won the game and what the secret word was
 # (if not) create an else statement telling the user that they have lost and whatt the secret word was
+
+def snowman():
+  generate_random_word = RandomWord()
+  snowman_word = generate_random_word.word(
+    word_min_length=SNOWMAN_MIN_WORD_LENGTH, 
+    word_max_length=SNOWMAN_MAX_WORD_LENGTH)
+
+  snowman_dict = build_correct_letter_guess_dict(snowman_word)
+  wrong_letter_guess_list = []
+  all_guessed_letters = False
+
+  guess_word_progress(snowman_word, snowman_dict)
+
+  while len(wrong_letter_guess_list) < WRONG_GUESS_ALLOWED and not all_guessed_letters:
+    user_input = get_letter_from_user(snowman_dict, wrong_letter_guess_list)
+
+    if user_input in snowman_dict:
+      print("You guessed a correct letter that's in the secret word. Keep going!")
+      snowman_dict[user_input] = True
+    else:
+      print(f"The letter {user_input} is not in the secret word, try a different letter.")
+      wrong_letter_guess_list.append(user_input)
+
+    all_guessed_letters = guess_word_progress(snowman_word, snowman_dict)
+    print("\nThe letters you've guessed correctly:")
+    show_guess_word_progress(snowman_word, snowman_dict)
+    print("\nThe letters you've guessed incorrectly: " + " ".join(wrong_letter_guess_list))
+    draw_snowman_graphic(len(wrong_letter_guess_list))
+
+  if all_guessed_letters:
+    print(f"CONGRATULATIONS, You have won the game! You were able to guessed the secret word! \nThe secret word was: {SNOWMAN_WORD}")
+  else:
+    print(f"GAME OVER, You have lost! You were not able to guessed the secret word. \nThe secret word was: {SNOWMAN_WORD}")
