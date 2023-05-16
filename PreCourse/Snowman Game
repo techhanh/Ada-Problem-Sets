@@ -1445,3 +1445,15 @@ def guess_word_progress(guess_word, correct_letter_guess_dict):
 # (if it is not) create an else statement and use the output progress string variable to incremented by itself with the underscore string (this will show all the letters that have the user have not correctly inputted in yet with an _ symbol)
 # (outside of the else statement) use the output progress string variable and increment by itself with a blank space string (this is to separate what the user has inputted in correctly vs what the user has not inputted in yet from each other with a space in between it to better visualize it)
 # (outside of the for loop) print the output progress string variable to show what the user's progress has been so far
+
+# helper function 3
+def show_guess_word_progress(guess_word, correct_letter_guess_dict):
+  output_progress_string = ""
+
+  for letter in guess_word:
+    if correct_letter_guess_dict[letter]:
+      output_progress_string += letter
+    else:
+      output_progress_string += "_"
+    output_progress_string+= " "
+  print(output_progress_string)
