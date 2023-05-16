@@ -1457,3 +1457,29 @@ def show_guess_word_progress(guess_word, correct_letter_guess_dict):
       output_progress_string += "_"
     output_progress_string+= " "
   print(output_progress_string)
+
+
+# pseudocode:
+# define a snowman function
+# create a generate random word variable and assign the RandomWord module to it
+# create a snowman word variable and assign the generate random word variable to the word module 
+# it will start with the word min length variable as the snowman min word length constant, and stop with the word max length variable as the snowman max word length constant
+# create a snowman dict variable and assign the build correct letter guess dict function to it (this is the helper function 1 previously created) with the snowman word as its parameter (this will create a dict for all the correct letters that the user has inputted in)
+# create a wrong letter guess variable and assign it as an empty list (this will be use to store all the wrong letters as a list that the user has input))
+# create an all guess letters variable and set it as False (this will be use to show later all the incorrect letters the user has guessed)
+# call the guess word progress function (from helper function 2) with its two parameters (the snowman word and the snowman dict)
+# create a while loop with the length of the wrong letter guess list variable and assign it to be less than the wrong guess allowed constant and not all guessed letters variable
+# (under the while loop) use the user input variable, and assign the previous get letter from user function to it (this is from part 1) with the 2 parameters (snowman dict and wrong letter guess list)
+# create an if statement with the user input variable to check if it is in the snowman dict variable
+# then create a print statement to show the letter was guess correctly
+# use the user input variaable that is part of the snowman dict variable and assign it as True (this will add to the empty dict if the letter was guess correctly)
+# (if it is not) create an else statement and print the statement to show that the user input variable is not in the word and to try again
+# use the wrong letter guess list variable and append it (add it to the end) to the user input variable (this will add all the wrong letters the user has inputted into the empty list)
+# (outside of the else statement) use the all guessed letters variable and set it to be the guess word progress function (helper fuction 2) with its 2 parameters (the snowman word and the snowman dict) (this variable will be use later to check if all of the letters were guess correctly or not to determine the outcome of the game)
+# print a statement telling the user they have guessed these letters correctly
+# call the show guess word progress function (from helper function 3) with its two parameters (the snowman word and the snowman dict) (this will show the letters that are correctly guess in the output progress string variable and will show the _ symbol if the letter has not been guessed yet in the output progress string variable)
+# print a statement telling the user what their wrong guess letters are and use the + sign (to join together the previous incorrect letter inputted in with the current incorrect letter inputted in) to join the wrong letter guess list variable (this provides an ongoing list of all the wrong letters the user has incorrectly inputted in)
+# call the draw snowman graphic function with the length of the wrong letter guess list (this will show the next element of the graphic line for each wrong letter the user has inputted in)
+# (outside of the while loop) use an if statement to check if all of the guess letters (are correctly inputted in)
+# (if so) print a statement telling the user that they have won the game and what the secret word was
+# (if not) create an else statement telling the user that they have lost and whatt the secret word was
