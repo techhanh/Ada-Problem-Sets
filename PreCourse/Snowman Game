@@ -1526,3 +1526,8 @@ def snowman():
 # then create a print statement with the iterated value (num user input) is part of the snowman graphics constant
 # (if haven't done yet), near the end of Part 2 inside the snowman function, call the draw snowman graphic function with the length of the the wrong letter guess list (as the argument) (this is to add an element of the snowman graphics each time the letter was guessed incorrectly)
 # at the very end of your code, call the snowman function to run all the functions together
+
+def draw_snowman_graphic(wrong_guess_attempt):
+
+  for num_user_input in range(WRONG_GUESS_ALLOWED - wrong_guess_attempt, WRONG_GUESS_ALLOWED):
+    print(SNOWMAN_GRAPHICS[num_user_input])
