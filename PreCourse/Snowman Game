@@ -1512,6 +1512,9 @@ def snowman():
     print("\nThe letters you've guessed incorrectly: " + " ".join(wrong_letter_guess_list))
     draw_snowman_graphic(len(wrong_letter_guess_list))
 
+
+# calling the snowman function to execute all the functions together
+snowman()
   if all_guessed_letters:
     print(f"CONGRATULATIONS, You have won the game! You were able to guessed the secret word! \nThe secret word was: {SNOWMAN_WORD}")
   else:
