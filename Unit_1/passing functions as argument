@@ -22,3 +22,5 @@ ACTION_2 = {
     "rating": 3.5,
     "release_year": 2013
 }
+
+movies = [COMEDY_1, COMEDY_2, ACTION_1, ACTION_2]
