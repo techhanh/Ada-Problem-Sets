@@ -44,3 +44,5 @@ def get_first_title_alphabetically(movies):
         if dict['title'] < first_title['title']:
             first_title = dict
     return first_title
+
+get_first_title_alphabetically(movies)
