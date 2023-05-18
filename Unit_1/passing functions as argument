@@ -24,3 +24,5 @@ ACTION_2 = {
 }
 
 movies = [COMEDY_1, COMEDY_2, ACTION_1, ACTION_2]
+
+1. Finding the movie dict with the first title alphabetically
