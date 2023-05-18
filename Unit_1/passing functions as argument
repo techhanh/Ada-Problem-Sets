@@ -25,4 +25,14 @@ ACTION_2 = {
 
 movies = [COMEDY_1, COMEDY_2, ACTION_1, ACTION_2]
 
-1. Finding the movie dict with the first title alphabetically
+
+Part 1. Finding the movie dict with the first title alphabetically
+
+# pseudocode for part 1:
+# define the function and its parameter (movies)
+# create a variable for the first title and assign it as the movies' first element
+# create a loop to go through each of the list elements in the global movies variable
+# use an if condition to check if the key "title" inside each of the dict is sorted alphabetically less (lexicographically) than the key "title" of the first movie variable
+# (if it is then) set the first title variable as the dict
+# return the first title's variable to show that full dict that has the first title sorted alphabetically
+# call the function name with the movies list as the argument
