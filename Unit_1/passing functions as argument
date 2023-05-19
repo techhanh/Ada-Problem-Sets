@@ -57,3 +57,10 @@ Part 2: Finding the movie dict with the earliest release date:
 # (if it is then) set the first release year variable as the dict
 # return the first release year's variable to show that full dict with the earliest release year
 # call the function name with the movies list as the argument
+
+def get_earliest_movie(movies):
+    first_release_year = movies[0]
+    for dict in movies:
+        if dict['release_year'] < first_release_year["release_year"]:
+            first_release_year = dict
+    return first_release_year
