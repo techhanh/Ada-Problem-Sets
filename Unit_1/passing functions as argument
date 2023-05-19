@@ -48,3 +48,12 @@ def get_first_movie(movies):
 get_first_movie(movies)
 
 Part 2: Finding the movie dict with the earliest release date:
+
+# pseudocode:
+# define the function and its parameter (movies)
+# create a variable for the first release year and assign it as the movies' first element
+# create a loop to go through each of the list elements in the global movies variable
+# use an if condition to check if the key "release_year" inside each of the dict is sorted numberically less than the key "release_year" of the first release year variable
+# (if it is then) set the first release year variable as the dict
+# return the first release year's variable to show that full dict with the earliest release year
+# call the function name with the movies list as the argument
