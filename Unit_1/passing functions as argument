@@ -64,3 +64,5 @@ def get_earliest_movie(movies):
         if dict['release_year'] < first_release_year["release_year"]:
             first_release_year = dict
     return first_release_year
+    
+get_earliest_movie(movies)
