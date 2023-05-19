@@ -46,3 +46,5 @@ def get_first_movie(movies):
     return first_title
     
 get_first_movie(movies)
+
+Part 2: Finding the movie dict with the earliest release date:
