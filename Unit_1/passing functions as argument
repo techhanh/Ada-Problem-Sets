@@ -66,3 +66,6 @@ def get_earliest_movie(movies):
     return first_release_year
     
 get_earliest_movie(movies)
+
+
+Part 3: Finding the movie dict with the lowest rating:
