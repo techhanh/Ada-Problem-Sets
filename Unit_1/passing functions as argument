@@ -69,3 +69,12 @@ get_earliest_movie(movies)
 
 
 Part 3: Finding the movie dict with the lowest rating:
+
+# pseudocode:
+# define the function and its parameter (movies)
+# create a variable for the lowest rating and assign it as the movies' first element
+# create a loop to go through each of the list elements in the global movies variable
+# use an if condition to check if the key "rating" inside each of the dict is sorted numberically less than the key "rating" of the lowest rating variable
+# (if it is then) set the lowest rating variable as the dict
+# return the lowest rating variable to show that full dict with the lowest rating
+# call the function name with the movies list as the argument
