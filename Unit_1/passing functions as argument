@@ -85,3 +85,5 @@ def get_lowest_rated_movie(movies):
         if dict['rating'] < lowest_rating["rating"]:
             lowest_rating = dict
     return lowest_rating
+    
+get_lowest_rated_movie(movies)
