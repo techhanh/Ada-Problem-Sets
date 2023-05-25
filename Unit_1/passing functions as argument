@@ -38,12 +38,11 @@ Part 1. Finding the movie dict with the first title alphabetically
 # call the function name with the movies list as the argument
 
 def get_first_movie(movies):
-    first_title = movies[0]
-    # print(first_title)
-    for dict in movies:
-        if dict['title'] < first_title['title']:
-            first_title = dict
-    return first_title
+    min_movie = movies[0]
+    for movie in movies:
+        if movie['title'] < min_movie["title"]:
+            min_movie = movie
+    return min_movie
     
 get_first_movie(movies)
 
