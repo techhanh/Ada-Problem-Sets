@@ -79,10 +79,10 @@ Part 3: Finding the movie dict with the lowest rating:
 # call the function name with the movies list as the argument
 
 def get_lowest_rated_movie(movies):
-    lowest_rating = movies[0]
-    for dict in movies:
-        if dict['rating'] < lowest_rating["rating"]:
-            lowest_rating = dict
-    return lowest_rating
+    min_movie = movies[0]
+    for movie in movies:
+        if movie["rating"] < min_movie["rating"]:
+            min_movie = movie
+    return min_m
     
 get_lowest_rated_movie(movies)
